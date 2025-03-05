@@ -9,9 +9,9 @@
       <div class="col-md-6 col-xs-12 mb-1" style="padding-top: 50px;">
         <div class="d-flex flex-column h-100" style="text-align: center;">
           <div>
-            <h5>MIRTE light</h5>
-            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
-            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'light' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>
+            <h5>MIRTE lite</h5>
+            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.lite") }}</p>
+            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'lite' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> lite!</button></router-link>
           </div>
           <img src="@/assets/images/MIRTE_lite_obstacle_sensor_transparant.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
         </div>
@@ -89,7 +89,7 @@
        <h3 style="text-align: center;">2</h3>
        <h3 style="text-align: center;">{{ $t("start.get_hardware") }}</h3>
  
-       <p v-if="level !== 'higher' && robot == 'light'" style="padding-top: 20px;">{{ $t("start.get_hardware_light_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && robot == 'lite'" style="padding-top: 20px;">{{ $t("start.get_hardware_lite_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
        <p v-if="level !== 'higher' && robot == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
        <p v-if="level !== 'higher' && robot == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
        <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: 'pioneer', selectable: true }}">bill of materials</router-link>.</p>
@@ -105,7 +105,7 @@
       <p v-if="level == 'higher'" style="padding-top: 20px;">{{ $t("start.select_software_text") }}:</p>
       <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
       <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png">here</a></p>
-      <p v-if="robot === 'light'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
+      <p v-if="robot === 'lite'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
 
       <select v-if="level === 'higher'" class="form-select" v-model="software">
         <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
@@ -120,7 +120,7 @@
     </div>
 
 
-    <div v-if="robot !== 'light'" class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
+    <div v-if="robot !== 'lite'" class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
        <h3 style="text-align: center;">4</h3>
        <h3 v-if="robot === 'pioneer' || level === 'higher'" style="text-align: center;">{{ $t("start.build_and_learn") }}</h3>
        <h3 v-if="robot === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</h3>       

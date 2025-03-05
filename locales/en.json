@@ -60,7 +60,7 @@
     "camera": "USB Camera"
   },
   "robots": {
-    "light": "Start learning about basic electronics and robot behaviour. By connecting two sensors to the motors (using the motor controller) one can build a robot that reacts to the sensors. Moving away from or towards the light, or not bumping into obstacles.",
+    "lite": "Start learning about basic electronics and robot behaviour. By connecting two sensors to the motors (using the motor controller) one can build a robot that reacts to the sensors. Moving away from or towards the light, or not bumping into obstacles.",
     "basic": "Learn about software (block-based and Python). By adding a microcontroller one can create more complex behaviours and use more sensors.",
     "pioneer": "Explore all robotic possibilities. By adding a computer one can use even more sensors (camera, but even lidar) and a gripper. Apart from programming in blocks and Python, one can also use all possibilites of Robot Operating System (ROS).",
     "start": "Get started with"
@@ -76,7 +76,7 @@
     "dxf_source": "FreeCAD source files",
     "get_hardware": "Get Hardware",
     "get_hardware_text": "Select your robot hardware, and check the essential parts in the",
-    "get_hardware_light_text": "Check the hardware you need in the",
+    "get_hardware_lite_text": "Check the hardware you need in the",
     "download_software": "Download Software",
     "select_software_text": "Select the SD card image for your Single Board Computer",
     "download_software_text": "Download the SD card image for the computer",
@@ -95,7 +95,7 @@
     "program_ide_text": "Start programming your robot in the",
     "customize": "Customize your",
     "select_robot_secondary_text": "At secondary level you can start with the MIRTE basic, or the MIRTE pioneer.",
-    "select_robot_primary_text": "At primary level you can start with the MIRTE light, or the MIRTE basic."
+    "select_robot_primary_text": "At primary level you can start with the MIRTE lite, or the MIRTE basic."
   }
 }
 

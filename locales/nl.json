@@ -43,7 +43,7 @@
     "camera": "USB Camera"
   },
   "robots": {
-    "light": "Leer de basis over electronica en robot gedrag. Door twee sensoren aan de motoren te koppelen (met de motor controller) kan je een robot bouwen die reageert op deze sensoren. De robot zal naar het licht toe of van het licht af bewegen. Of juist obstakels vermijden.",
+    "lite": "Leer de basis over electronica en robot gedrag. Door twee sensoren aan de motoren te koppelen (met de motor controller) kan je een robot bouwen die reageert op deze sensoren. De robot zal naar het licht toe of van het licht af bewegen. Of juist obstakels vermijden.",
     "basic": "Leer over software (blokken en Python). Door een microcontroller toe te voegen kan je complexer gedrag maken en more sensoren gebruiken.",
     "pioneer": "Ontdek alle mogelijkheden van robotica. Door een computer toe te voegen kunnen nog meer sensoren gebruikt worden (camera en zelfs lidar) en een gripper. Naast programmeren in blokken en Python, kunnen nu alle mogelijkheden van Robot Operating System (ROS) benut worden.",
     "start": "Aan de slag met"
@@ -59,7 +59,7 @@
     "dxf_source": "FreeCAD source bestanden",
     "get_hardware": "Hardware",
     "get_hardware_text": "Stel je robot samen en bekijk de noodzakelijk hardware in de",
-    "get_hardware_light_text": "Bekijk welke hardware je nodig hebt in de",
+    "get_hardware_lite_text": "Bekijk welke hardware je nodig hebt in de",
     "download_software": "Download Software",
     "select_software_text": "Selecteer het SD-kaart image voor de computer",
     "download_software_text": "Download het SD-kaart image voor de computer.",
@@ -78,7 +78,7 @@
     "program_ide_text": "Programmeer je robot in de",
     "customize": "Verander je",
     "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE basic of de MIRTE pioneer.",
-    "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE light of de MIRTE basic."
+    "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE lite of de MIRTE basic."
   }
 
 

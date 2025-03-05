@@ -22,7 +22,7 @@
     </div>
     <div class="row">
       <div class="text-center">
-      <router-link :to="{ name: 'robots', params: { robot: 'light' }}" ><button class="btn my-button">{{ $t("home.check_robots") }} <span class="mirte">MIRTE</span> robots!</button></router-link>       
+      <router-link :to="{ name: 'robots', params: { robot: 'lite' }}" ><button class="btn my-button">{{ $t("home.check_robots") }} <span class="mirte">MIRTE</span> robots!</button></router-link>       
     </div>
 
    </div>

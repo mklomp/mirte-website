@@ -5,15 +5,15 @@
 
 <div id="carouselExampleDark" class="carousel carousel-dark slide d-flex flex-row h-100" data-bs-interval="false" data-bs-wrap="false">
 
-   <div class="carousel-item" :class="robot == 'light' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'lite' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
-           <img src="@/assets/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE light">
+           <img src="@/assets/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE lite">
         </div>
         <div>
-          <h5>MIRTE light</h5>
-          <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
-          <router-link :to="{name: 'start', params: { robot: 'light' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>          
+          <h5>MIRTE lite</h5>
+          <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.lite") }}</p>
+          <router-link :to="{name: 'start', params: { robot: 'lite' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> lite!</button></router-link>          
         </div>
      </div>
    </div>
@@ -74,11 +74,11 @@
   <div style="flex: 1;">
   
 
-   <div class="carousel-item" :class="robot == 'light' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'lite' ? 'active' : ''">
       <div style="height: 60vh; background-color: green;">
       <div style="margin: auto; text-align: center;">
-        <img src="@/assets/images/light_render.png" class="d-block" alt="Mirte Light" style="margin: auto; width: 70%;">
-        <h5><span class="mirte">MIRTE</span> light</h5>
+        <img src="@/assets/images/lite_render.png" class="d-block" alt="Mirte Lite" style="margin: auto; width: 70%;">
+        <h5><span class="mirte">MIRTE</span> lite</h5>
         <p>Info about ...</p>
 
       </div>

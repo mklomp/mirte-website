@@ -3,10 +3,10 @@
 <div>
   <div class="container">
     <div v-if="selectable" class="row">
-      <div class="col-4" @click="robot='light'" style="text-align: center;">
-        <button :style="robot == 'light' ? 'background-color: #f1be45;': ''">
+      <div class="col-4" @click="robot='lite'" style="text-align: center;">
+        <button :style="robot == 'lite' ? 'background-color: #f1be45;': ''">
          <div style="padding: 10px;">
-         <img src="@/assets/images/light_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> light
+         <img src="@/assets/images/lite_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> lite
          </div>
         </button> 
       </div>
@@ -62,7 +62,7 @@ export default {
       // The variable names used here are all from i18n lin locales
       return {
         robots: {
-          light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
+          lite: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
                   'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'actuators','servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},
           basic: {'selected': ['raspberry_pico', 'l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad'],
                   'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'sd_card', 'actuators', 'servo', 'oled', 'camera']},

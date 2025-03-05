@@ -3,7 +3,7 @@
 
   <div class="container-fluid">
     <router-link :to="{name: 'home'}" class="navbar-brand" style="font-family: Livvic-Bold;">
-       <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE light" height="45">
+       <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE lite" height="45">
        <h1>MIRTE</h1>
     </router-link>
     <button class="navbar-toggler" type="button" @click="visible=!visible" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
@@ -19,7 +19,7 @@
             {{ $t("navbar.robots") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <router-link :to="{name: 'robots', params: { robot: 'light' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Light</router-link>
+            <router-link :to="{name: 'robots', params: { robot: 'lite' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Lite</router-link>
             <router-link :to="{name: 'robots', params: { robot: 'basic' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Basic</router-link>
             <router-link :to="{name: 'robots', params: { robot: 'pioneer' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Pioneer</router-link>
             <div class="dropdown-divider"></div>
