@@ -3,12 +3,13 @@
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'nuxt/app'
 
-const route = useRoute()
 const router = useRouter()
-let robot = computed(() => route.query.robot)
+let robot = ref('lite')
 const robots = ['lite', 'basic', 'pioneer', 'master'];
 
 onMounted(() => {
+  const route = useRoute()
+  robot.value = route.query.robot || 'lite'
   const carouselEl = document.getElementById('carouselExampleDark');
  
   // Listen for slide change event
