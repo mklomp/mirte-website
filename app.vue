@@ -1,11 +1,11 @@
 
 <template>
-  <div class="layout">
+  <div class="wrapper">
     <nav class="navbar navbar-expand-sm fixed-top">
       <NuxtLayout />
     </nav>
 
-    <main style="padding: 0px; margin-top: 56px;">
+    <main class="flex-grow-1">
       <NuxtPage />
     </main>
 
