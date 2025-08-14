@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# mirte-website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains the code for the MIRTE website on https://mirte.org.
 
-## Setup
+## Build preparations
 
-Make sure to install dependencies:
+In order to build and run both the frontend and backend one needs an installation of NodeJS. We
+prefer using nodeenv.
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```sh
+sudo apt install -y python3-pip
+sudo -H pip install nodeenv
+nodeenv --node=22.0.0 node_env
+source node_env/bin/activate
 ```
 
-## Development Server
+## Build
 
-Start the development server on `http://localhost:3000`:
+- backend:
 
-```bash
-# npm
-npm run dev
+  ```sh
+  npm install
+  npm run dev
+  ```
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
