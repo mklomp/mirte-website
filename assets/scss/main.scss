@@ -128,7 +128,9 @@ input:disabled+label {
   color: #ccc;
 }
 
-
+.locale-selector {
+  background-color: $light-blue !important;
+}
 
 .nav-spacer{
     height: 100%;
@@ -138,7 +140,7 @@ input:disabled+label {
 }
 
 .nav-item a{
-    color: $black !important;
+    color: var(--bs-nav-link-color);
 }
 
 .nav-link.active{
