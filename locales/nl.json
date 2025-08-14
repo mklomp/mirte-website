@@ -10,7 +10,8 @@
     "secondary": "Voortgezet onderwijs",
     "higher": "Hoger onderwijs",
     "workshops": "Workshops",
-    "docs": "Documentatie (EN)"
+    "docs": "Documentatie (EN)",
+    "meet": "Ontmoet de Robot"
   },
   "footer": "wordt ontwikkeld door",
   "home": {
@@ -79,6 +80,15 @@
     "customize": "Verander je",
     "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE basic of de MIRTE pioneer.",
     "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE lite of de MIRTE basic."
+  },
+  "meet":{
+    "workshops": "Workshops",
+    "events": "Evenementen",
+    "weekends": "Elk weekend",
+    "annual": "Jaarlijks",
+    "onrequest": "Op aanvraag",
+    "workshops_text": "Er zijn meerdere organiaties die workshops met de MIRTE robot organiseren.",
+    "events_text": "MIRTE is aak aanwezig op conferencies, makerfaires, summerschools en andere evenementen."
   }
 
 

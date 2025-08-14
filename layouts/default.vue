@@ -48,6 +48,9 @@
              <a class="nav-link" href="https://github.com/mirte-robot">Github</a>
           </ul>
         </li>
+        <li class="nav-item">
+          <NuxtLink :to="{ path: '/meet'}" class="nav-link" @click="visible=!visible"> {{ $t("navbar.meet") }}</NuxtLink>
+        </li>
       </ul>
     </div>
   </div>

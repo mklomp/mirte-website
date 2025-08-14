@@ -10,7 +10,8 @@
     "secondary": "Secondary education",
     "higher": "Higher education",
     "workshops": "Workshops",
-    "docs": "Documentation"
+    "docs": "Documentation",
+    "meet": "Meet the Robot"
   },
   "footer": "is being developed by",
   "home": {
@@ -97,6 +98,15 @@
     "customize": "Customize your",
     "select_robot_secondary_text": "At secondary level you can start with the MIRTE basic, or the MIRTE pioneer.",
     "select_robot_primary_text": "At primary level you can start with the MIRTE lite, or the MIRTE basic."
+  },
+  "meet":{
+    "workshops": "Workshops",
+    "events": "Events",
+    "weekends": "Every weekend",
+    "annual": "Anually",
+    "onrequest": "On request",
+    "workshops_text": "There are multiple institutions organizing workshops with the MIRTE robot.",
+    "events_text": "MIRTE is also present at conferences, makerfaires, summerschools and other events."
   }
 }
 
