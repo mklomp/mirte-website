@@ -12,7 +12,7 @@ const recurring = [
 const events = [
   { title: 'SEFI 2025', location: 'Tampere, FI', startDate: '2025-09-16', link: 'https://www.sefi2025.eu/programme/' },
   { title: 'ROSCon UK 2025', location: 'Edinburgh, UK', startDate: '2025-09-16', link: 'https://ros2edu.github.io/' },
-  { title: 'NUVO Summerskills 2025', location: 'Delft, NL', startDate: '2025-08-01', link: 'https://www.de-nuvo.nl/zomerskills/' },
+  { title: 'NUVO Summerskills 2025', location: 'Delft/Amsterdam, NL', startDate: '2025-07-14', endDate: '2025-08-08', link: 'https://www.de-nuvo.nl/zomerskills/' },
   { title: 'SEFI 2024', location: 'Lausanne, CH', startDate: '2024-09-04', link: 'https://sefi2024.eu/conference/program/' },
   { title: 'ACM SIGSOFT Summer School for Software Engineering in Robotics 2025', location: 'Delft, NL', startDate: '2025-07-30', endDate: '2025-08-04', link: 'https://scivenia.com/en/event/acm-sigsoft-summer-school-for-software-engineering-in-robotic' },
   { title: 'SURF Onderwijsdagen 2024', location: 'Den Haag, NL', startDate: '2024-11-12', link: 'https://pretalx.surf.nl/surf-onderwijsdagen-2024/schedule/' },
