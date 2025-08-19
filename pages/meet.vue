@@ -6,7 +6,7 @@ const recurring = [
   { title: 'TechniekStudio - TU Delft Science Centre', location: 'Delft', language: 'NL', recurrenceKey: 'meet.weekends', link: 'https://www.tudelft.nl/sciencecentre/ontdek/techniekstudio' },
   { title: 'Khaldon Araffa', location: 'Netherlands', language: 'EN/AR/UK', recurrenceKey: 'meet.onrequest', link: 'https://khaldon-araffa.com/en/robotics-workshop' },
   { title: 'Pre-university Program - TU Delft', location: 'Delft', language: 'NL', recurrenceKey: 'meet.annual', link: 'https://www.tudelft.nl/onderwijs/studievoorlichting/voorlichting-bachelor/tu-delft-pre-university-programme/pre-university-on-campus-tracks/robotica-voor-iedereen-bouw-en-programmeer-jouw-eigen-robot' },
-  { title: 'NUVO', location: 'Delft area', language: 'NL', recurrenceKey: 'meet.onrequest', link: 'https://www.de-nuvo.nl/' },
+  { title: 'NUVO', location: 'Alles tussen Amsterdam-Den Haag-Rotterdam', language: 'NL/EN', recurrenceKey: 'meet.onrequest', link: 'https://www.de-nuvo.nl/' },
 ]
 
 const events = [
