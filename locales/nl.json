@@ -10,11 +10,12 @@
     "secondary": "Voortgezet onderwijs",
     "higher": "Hoger onderwijs",
     "workshops": "Workshops",
-    "docs": "Documentatie (EN)"
+    "docs": "Documentatie (EN)",
+    "meet": "Ontmoet Mirte"
   },
   "footer": "wordt ontwikkeld door",
   "home": {
-    "home": "Een goedkope volledig open source onderwijs robotlijn vanaf basisonserwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. mechanica, software, and electronica).",
+    "home": "Een goedkope, volledig open source onderwijs robotlijn vanaf basisonderwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. mechanica, software, and electronica).",
     "check_robots": "Bekijk alle"
   },
   "configure": {
@@ -79,6 +80,15 @@
     "customize": "Verander je",
     "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE basic of de MIRTE pioneer.",
     "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE lite of de MIRTE basic."
+  },
+  "meet":{
+    "workshops": "Workshops",
+    "events": "Evenementen",
+    "weekends": "Elk weekend",
+    "annual": "Jaarlijks",
+    "onrequest": "Op aanvraag",
+    "workshops_text": "Er zijn meerdere organiaties die workshops met de MIRTE robot organiseren.",
+    "events_text": "MIRTE is aak aanwezig op conferencies, makerfaires, summerschools en andere evenementen."
   }
 
 

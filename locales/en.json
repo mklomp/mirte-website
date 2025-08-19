@@ -10,11 +10,12 @@
     "secondary": "Secondary education",
     "higher": "Higher education",
     "workshops": "Workshops",
-    "docs": "Documentation"
+    "docs": "Documentation",
+    "meet": "Meet Mirte"
   },
   "footer": "is being developed by",
   "home": {
-    "home": "A low-cost fully open source educational robot track from primary school up to univerity level. Using a standard set of off-the-shelf components one can gradually learn about multiple engineering disciplines (eg. mechanical, software, and electical).",
+    "home": "A low-cost, fully open-source educational robot track from primary school up to university level. Using a standard set of off-the-shelf components, one can gradually learn about multiple engineering disciplines (eg, mechanical, software, and electrical).",
     "check_robots": "Check out all"
   },
   "configure": {
@@ -97,6 +98,15 @@
     "customize": "Customize your",
     "select_robot_secondary_text": "At secondary level you can start with the MIRTE basic, or the MIRTE pioneer.",
     "select_robot_primary_text": "At primary level you can start with the MIRTE lite, or the MIRTE basic."
+  },
+  "meet":{
+    "workshops": "Workshops",
+    "events": "Events",
+    "weekends": "Every weekend",
+    "annual": "Anually",
+    "onrequest": "On request",
+    "workshops_text": "There are multiple institutions organizing workshops with the MIRTE robot.",
+    "events_text": "MIRTE is also present at conferences, makerfaires, summerschools and other events."
   }
 }
 

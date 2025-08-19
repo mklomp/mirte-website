@@ -20,37 +20,49 @@
 }
 
 
-
+// Layout of the main elements
 html, body {
   height: 100%;
   margin: 0;
 }
 
-.layout {
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-nav {
-  background: #eee;
-  padding: 1em;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
 main {
-  flex: 1;
-  padding: 0px;
-  margin-top: 56px;
+  margin-top: 82px; // account for fixed navbar
 }
 
 footer {
   background: #fff;
-  padding: 1em;
+  padding: 1rem;
   text-align: center;
 }
+
+.hero {
+  flex: 1;
+  background-image: url('@/assets/images/lijn.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+
+
+.content{
+    background-color: $white;
+    height: 20vh;
+}
+
+.container{
+    padding: 2em 0; 
+    width: 100vw;
+}
+
+
 
 #__nuxt {
   overflow-x:hidden; // preventing carousel from adding scrollbar. cant be in body due to viewport
@@ -75,6 +87,8 @@ footer {
   height: 100%;
 }
 
+
+// Colors of the elements
 a { color: inherit !important; } 
 
 
@@ -110,37 +124,13 @@ nav {
 }
 
 
-
 input:disabled+label {
   color: #ccc;
 }
 
-.hero {
-  flex: 1;
-  background-image: url('@/assets/images/lijn.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0px;
+.locale-selector {
+  background-color: $light-blue !important;
 }
-
-
-nav{
-    font-family: 'Overpass-Bold';
-    width: 100%;
-    background-color: $grey-blue;
-}
-
-.content{
-    background-color: $white;
-    height: 20vh;
-}
-
-.container{
-    padding: 2em 0; 
-    width: 100vw;
-}
-
 
 .nav-spacer{
     height: 100%;
@@ -150,7 +140,7 @@ nav{
 }
 
 .nav-item a{
-    color: $black !important;
+    color: var(--bs-nav-link-color);
 }
 
 .nav-link.active{
