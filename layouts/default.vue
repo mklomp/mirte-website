@@ -47,15 +47,15 @@
               Higher Education</NuxtLink>
             <div class="dropdown-divider"></div>
             <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link">{{ $t("navbar.workshops") }}</a>
-            <a href="https://docs.mirte.org/" class="nav-link">{{ $t("navbar.docs") }}</a>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            {{ $t("navbar.contribute") }}
+            {{ $t("navbar.developers") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <a href="https://docs.mirte.org/" class="nav-link">{{ $t("navbar.docs") }}</a>
             <a class="nav-link" href="https://github.com/mirte-robot">Github</a>
           </ul>
         </li>
