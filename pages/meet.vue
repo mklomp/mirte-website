@@ -10,6 +10,8 @@ const recurring = [
 ]
 
 const events = [
+  { title: 'Highlight Delft', location: 'Delft, NL', startDate: '2026-02-11', endDate: '2026-02-14', link: 'https://www.highlightdelft.nl/' },
+  { title: 'Learning Impact Europe 2025', location: 'Delft, NL', startDate: '2025-09-22', link: 'https://web.cvent.com/event/7830f843-2700-4a13-93a4-1e379e88763d/summary' },
   { title: 'SEFI 2025', location: 'Tampere, FI', startDate: '2025-09-16', link: 'https://www.sefi2025.eu/programme/' },
   { title: 'ROSCon UK 2025', location: 'Edinburgh, UK', startDate: '2025-09-16', link: 'https://ros2edu.github.io/' },
   { title: 'NUVO Summerskills 2025', location: 'Delft/Amsterdam, NL', startDate: '2025-07-14', endDate: '2025-08-08', link: 'https://www.de-nuvo.nl/zomerskills/' },
