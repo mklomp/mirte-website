@@ -10,7 +10,7 @@ prefer using nodeenv.
 ```sh
 sudo apt install -y python3-pip
 sudo -H pip install nodeenv
-nodeenv --node=22.0.0 node_env
+nodeenv --node=22.12.0 node_env
 source node_env/bin/activate
 ```
 
