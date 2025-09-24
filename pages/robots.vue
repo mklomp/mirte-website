@@ -7,6 +7,7 @@ const route = useRoute()
 const router = useRouter()
 let robot = computed(() => route.query.robot)
 const robots = ['lite', 'basic', 'pioneer', 'master'];
+const isMounted = ref(false)
 
 onMounted(() => {
   const carouselEl = document.getElementById('carouselExampleDark');
@@ -23,16 +24,18 @@ onMounted(() => {
   onBeforeUnmount(() => {
     carouselEl.removeEventListener('slid.bs.carousel', onSlide)
   })
+  isMounted.value = true
 })
 </script>
 
 <template>
   <div style="height: 70vh;">
     <div id="carouselExampleDark" class="carousel carousel-dark slide d-flex flex-row h-100" data-bs-interval="false" data-bs-wrap="false">
+    <div v-if="isMounted" class="carousel-inner h-100 d-flex">
       <MyComponent robot="lite" :active="robot === 'lite'"/>
       <MyComponent robot="basic" :active="robot === 'basic'"/>
       <MyComponent robot="pioneer" :active="robot === 'pioneer'"/>
-      <!--<MyComponent robot="master" :active="robot === 'master'"/>-->
+    </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
