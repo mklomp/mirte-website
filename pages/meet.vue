@@ -3,10 +3,11 @@ import { ref, computed } from 'vue'
 
 // Sample data
 const recurring = [
-  { title: 'TechniekStudio - TU Delft Science Centre', location: 'Delft', language: 'NL', recurrenceKey: 'meet.weekends', link: 'https://www.tudelft.nl/sciencecentre/ontdek/techniekstudio' },
-  { title: 'Khaldon Araffa', location: 'Netherlands', language: 'EN/AR/UK', recurrenceKey: 'meet.onrequest', link: 'https://khaldon-araffa.com/en/robotics-workshop' },
-  { title: 'Pre-university Program - TU Delft', location: 'Delft', language: 'NL', recurrenceKey: 'meet.annual', link: 'https://www.tudelft.nl/onderwijs/studievoorlichting/voorlichting-bachelor/tu-delft-pre-university-programme/pre-university-on-campus-tracks/robotica-voor-iedereen-bouw-en-programmeer-jouw-eigen-robot' },
-  { title: 'NUVO', location: 'Alles tussen Amsterdam-Den Haag-Rotterdam', language: 'NL/EN', recurrenceKey: 'meet.onrequest', link: 'https://www.de-nuvo.nl/' },
+  { title: 'TechniekStudio - TU Delft Science Centre', location: 'Delft', language: 'NL', robot: 'Pioneer', recurrenceKey: 'meet.weekends', link: 'https://www.tudelft.nl/sciencecentre/ontdek/techniekstudio' },
+  { title: 'Khaldon Araffa', location: 'Netherlands', language: 'EN/AR/UK', robot: 'Pioneer', recurrenceKey: 'meet.onrequest', link: 'https://khaldon-araffa.com/en/robotics-workshop' },
+  { title: 'Pre-university Program - TU Delft', location: 'Delft', language: 'NL', robot: 'Pioneer', recurrenceKey: 'meet.annual', link: 'https://www.tudelft.nl/onderwijs/studievoorlichting/voorlichting-bachelor/tu-delft-pre-university-programme/pre-university-on-campus-tracks/robotica-voor-iedereen-bouw-en-programmeer-jouw-eigen-robot' },
+  { title: 'NUVO', location: 'Tussen Amsterdam-Den Haag-Rotterdam', language: 'NL/EN', robot: 'Lite/Pioneer', recurrenceKey: 'meet.onrequest', link: 'https://www.de-nuvo.nl/' },
+  { title: 'MIRTE lite workshop - TU Delft Science Centre', location: 'Delft', language: 'NL', robot: 'Lite', recurrenceKey: 'meet.onrequest', link: 'https://www.tudelft.nl/sciencecentre/educatie/groep-7-en-8/mirte-lite'}, 
 ]
 
 const events = [
@@ -58,7 +59,12 @@ const eventsWithStatus = computed(() => {
           <a :href="item.link" target="_blank" class="card text-decoration-none h-100 bg-light text-dark opacity-100">
             <div class="card-body text-dark">
               <h5 class="card-title">{{ item.title }}</h5>
-              <p class="card-text">📍 {{ item.location }} • 🗣 {{ item.language }}  • 📅 {{ $t(item.recurrenceKey) }}</p>
+              <p class="card-text">
+                <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
+                <FontAwesomeIcon icon="globe" class="icon-color"/> {{ item.language }}
+                <FontAwesomeIcon icon="robot" class="icon-color"/> {{ $t(item.robot) }}
+                <FontAwesomeIcon icon="calendar-days" class="icon-color"/> {{ $t(item.recurrenceKey) }}
+              </p>
             </div>
           </a>
         </div>
@@ -72,7 +78,8 @@ const eventsWithStatus = computed(() => {
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">
-                📍 {{ item.location }} • 📅
+                <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
+                <FontAwesomeIcon icon="calendar-days" class="icon-color"/>
                 {{ new Date(item.startDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}
   <span v-if="item.endDate"> - {{ new Date(item.endDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}</span>
               </p>
