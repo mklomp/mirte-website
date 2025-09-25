@@ -40,11 +40,11 @@
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
             <NuxtLink :to="{ path: '/start', query: { level: 'primary' } }" class="nav-link" @click="visible = !visible">
-              Primary Education</NuxtLink>
+              {{ $t("navbar.primary") }}</NuxtLink>
             <NuxtLink :to="{ path: '/start', query: { level: 'secondary' } }" class="nav-link" @click="visible = !visible">
-              Secondary Education</NuxtLink>
+              {{ $t("navbar.secondary") }}</NuxtLink>
             <NuxtLink :to="{ path: '/steps', query: { level: 'higher' } }" class="nav-link" @click="visible = !visible">
-              Higher Education</NuxtLink>
+              {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
             <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link">{{ $t("navbar.workshops") }}</a>
           </ul>
