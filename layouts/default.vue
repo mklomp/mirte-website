@@ -1,8 +1,11 @@
+<script setup>
+import { useLocalePath } from '#i18n'
+const localePath = useLocalePath()
+</script>
+
 <template>
-
-
   <div class="container-fluid">
-    <NuxtLink to="/" class="navbar-brand" style="font-family: Livvic-Bold;">
+    <NuxtLink :to="localePath('index')" class="navbar-brand" style="font-family: Livvic-Bold;">
       <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE lite" height="45">
       <h1>MIRTE</h1>
     </NuxtLink>
@@ -13,7 +16,7 @@
     <div class="navbar-collapse" :class="!visible ? 'collapse' : ''" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <NuxtLink to="/" class="nav-link" @click="visible = !visible"> {{ $t("navbar.home") }}</NuxtLink>
+          <NuxtLink :to="localePath('index')" class="nav-link" @click="visible = !visible"> {{ $t("navbar.home") }}</NuxtLink>
         </li>
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
