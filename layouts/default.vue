@@ -49,7 +49,9 @@ const localePath = useLocalePath()
             <NuxtLink :to="{ path: '/steps', query: { level: 'higher' } }" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
-            <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link">{{ $t("navbar.workshops") }}</a>
+            <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
+              {{ $t("navbar.workshops") }} <FontAwesomeIcon icon="arrow-up-right-from-square" />
+            </a>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -58,8 +60,12 @@ const localePath = useLocalePath()
             {{ $t("navbar.developers") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <a href="https://docs.mirte.org/" class="nav-link">{{ $t("navbar.docs") }}</a>
-            <a class="nav-link" href="https://github.com/mirte-robot">Github</a>
+            <a href="https://docs.mirte.org/" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
+              {{ $t("navbar.docs") }} <FontAwesomeIcon icon="arrow-up-right-from-square" />
+            </a>
+            <a class="nav-link d-flex" href="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">
+              Github <FontAwesomeIcon icon="arrow-up-right-from-square" />
+            </a>
           </ul>
         </li>
         <li class="nav-item">
