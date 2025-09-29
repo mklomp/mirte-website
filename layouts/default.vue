@@ -24,15 +24,15 @@ const localePath = useLocalePath()
             {{ $t("navbar.robots") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <NuxtLink :to="{ path: '/robots', query: { robot: 'lite' } }" class="nav-link" @click="visible = !visible"><span
+            <NuxtLink :to="localePath({ path: '/robots', query: { robot: 'lite' } })" class="nav-link" @click="visible = !visible"><span
                 class="mirte">MIRTE</span> Lite</NuxtLink>
-            <NuxtLink :to="{ path: '/robots', query: { robot: 'basic' } }" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/robots', query: { robot: 'basic' } })" class="nav-link" @click="visible = !visible">
               <span class="mirte">MIRTE</span> Basic</NuxtLink>
-            <NuxtLink :to="{ path: '/robots', query: { robot: 'pioneer' } }" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/robots', query: { robot: 'pioneer' } })" class="nav-link" @click="visible = !visible">
               <span class="mirte">MIRTE</span> Pioneer</NuxtLink>
-            <!--  <NuxtLink :to="{path: '/hardware', query: { robot: 'master' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Master</NuxtLink>-->
+            <!--  <NuxtLink :to="localePath({path: '/hardware', query: { robot: 'master' }})" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Master</NuxtLink>-->
             <div class="dropdown-divider"></div>
-            <NuxtLink :to="{ path: '/configure', query: { robot: 'pioneer', selectable: true } }" class="nav-link"
+            <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'pioneer', selectable: true } })" class="nav-link"
               @click="visible = !visible">{{ $t("navbar.configure") }}</NuxtLink>
           </ul>
         </li>
@@ -42,11 +42,11 @@ const localePath = useLocalePath()
             {{ $t("navbar.start") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <NuxtLink :to="{ path: '/start', query: { level: 'primary' } }" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/start', query: { level: 'primary' } })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.primary") }}</NuxtLink>
-            <NuxtLink :to="{ path: '/start', query: { level: 'secondary' } }" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/start', query: { level: 'secondary' } })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.secondary") }}</NuxtLink>
-            <NuxtLink :to="{ path: '/steps', query: { level: 'higher' } }" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/steps', query: { level: 'higher' } })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
             <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
@@ -69,7 +69,7 @@ const localePath = useLocalePath()
           </ul>
         </li>
         <li class="nav-item">
-          <NuxtLink :to="{ path: '/meet' }" class="nav-link" @click="visible = !visible"> {{ $t("navbar.meet") }}
+          <NuxtLink :to="localePath({ path: '/meet' })" class="nav-link" @click="visible = !visible"> {{ $t("navbar.meet") }}
           </NuxtLink>
         </li>
         <li class="nav-item dropdown">
