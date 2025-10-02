@@ -62,10 +62,10 @@ const eventsWithStatus = computed(() => {
             <div class="card-body text-dark">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">
-                <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
-                <FontAwesomeIcon icon="globe" class="icon-color"/> {{ item.language }}
-                <FontAwesomeIcon icon="robot" class="icon-color"/> {{ item.robot }}
-                <FontAwesomeIcon icon="calendar-days" class="icon-color"/> {{ $t(item.recurrenceKey) }}
+                <ClientOnly><FontAwesomeIcon icon="location-dot" class="icon-color" /></ClientOnly> {{ item.location }} 
+                <ClientOnly><FontAwesomeIcon icon="globe" class="icon-color"/></ClientOnly> {{ item.language }}
+                <ClientOnly><FontAwesomeIcon icon="robot" class="icon-color"/></ClientOnly> {{ item.robot }}
+                <ClientOnly><FontAwesomeIcon icon="calendar-days" class="icon-color"/></ClientOnly> {{ $t(item.recurrenceKey) }}
               </p>
             </div>
           </a>
@@ -80,8 +80,8 @@ const eventsWithStatus = computed(() => {
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">
-                <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
-                <FontAwesomeIcon icon="calendar-days" class="icon-color"/>
+    <!--            <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
+                <FontAwesomeIcon icon="calendar-days" class="icon-color"/> -->
                 {{ new Date(item.startDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}
   <span v-if="item.endDate"> - {{ new Date(item.endDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}</span>
               </p>

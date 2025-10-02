@@ -37,6 +37,12 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
 
+  vue: {
+    compilerOptions: {
+      hydrationMismatchDetails: true
+    }
+  },
+  
   ssr: true,
 
   vite: {

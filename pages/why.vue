@@ -33,9 +33,7 @@ onMounted(() => {
         <!-- Text side -->
         <div class="col-md-6 mb-4 mb-md-0">
           <h1 class="mb-3">MIRTE{{ $t('about.why.mission') }}</h1>
-          <p class="lead">
-            <p v-html="$t('about.why.mission_text', {strongStart: '<strong>',strongEnd: '</strong>'})"></p>
-          </p>
+          <p class="lead" v-html="$t('about.why.mission_text', {strongStart: '<strong>',strongEnd: '</strong>'})"></p>
         </div>
 
         <!-- Dynamic Carousel side -->
@@ -77,7 +75,7 @@ onMounted(() => {
         <div class="col-md-4">
           <div class="card h-100 pillar-card text-center">
             <div class="icon-bg">
-              <FontAwesomeIcon icon="lock-open" />
+              <ClientOnly><FontAwesomeIcon icon="lock-open" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
               <h4 class="card-title fw-bold">{{ $t('about.why.open') }}</h4>
@@ -92,7 +90,7 @@ onMounted(() => {
         <div class="col-md-4">
           <div class="card h-100 pillar-card text-center">
             <div class="icon-bg">
-              <FontAwesomeIcon icon="puzzle-piece" />
+              <ClientOnly><FontAwesomeIcon icon="puzzle-piece" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
               <h4 class="card-title fw-bold">{{ $t('about.why.modular') }}</h4>
@@ -107,7 +105,7 @@ onMounted(() => {
         <div class="col-md-4">
           <div class="card h-100 pillar-card text-center">
             <div class="icon-bg">
-              <FontAwesomeIcon icon="sack-dollar" />
+              <ClientOnly><FontAwesomeIcon icon="sack-dollar" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
               <h4 class="card-title fw-bold">{{ $t('about.why.affordable') }}</h4>

@@ -64,7 +64,7 @@ const localePath = useLocalePath()
               {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
             <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
-              {{ $t("navbar.workshops") }} <FontAwesomeIcon icon="arrow-up-right-from-square" />
+              {{ $t("navbar.workshops") }} <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
             </a>
           </ul>
         </li>
@@ -75,10 +75,10 @@ const localePath = useLocalePath()
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
             <a href="https://docs.mirte.org/" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
-              {{ $t("navbar.docs") }} <FontAwesomeIcon icon="arrow-up-right-from-square" />
+              {{ $t("navbar.docs") }} <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
             </a>
             <a class="nav-link d-flex" href="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">
-              Github <FontAwesomeIcon icon="arrow-up-right-from-square" />
+              Github <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
             </a>
           </ul>
         </li>
