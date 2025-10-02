@@ -42,10 +42,12 @@ const localePath = useLocalePath()
               <span class="mirte">MIRTE</span> Basic</NuxtLink>
             <NuxtLink :to="localePath({ path: '/robots', query: { robot: 'pioneer' } })" class="nav-link" @click="visible = !visible">
               <span class="mirte">MIRTE</span> Pioneer</NuxtLink>
-            <!--  <NuxtLink :to="localePath({path: '/hardware', query: { robot: 'master' }})" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Master</NuxtLink>-->
             <div class="dropdown-divider"></div>
             <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'pioneer', selectable: true } })" class="nav-link"
               @click="visible = !visible">{{ $t("navbar.configure") }}</NuxtLink>
+            <div class="dropdown-divider"></div>
+            <NuxtLink :to="localePath({path: '/robots', query: { robot: 'master' }})" class="nav-link" @click="visible=!visible">
+              <span class="mirte">MIRTE</span> Master</NuxtLink>
           </ul>
         </li>
         <li class="nav-item dropdown">

@@ -35,6 +35,7 @@ onMounted(() => {
       <MyComponent robot="lite" :active="robot === 'lite'"/>
       <MyComponent robot="basic" :active="robot === 'basic'"/>
       <MyComponent robot="pioneer" :active="robot === 'pioneer'"/>
+      <MyComponent robot="master" :active="robot === 'master'"/>
     </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

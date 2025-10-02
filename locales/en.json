@@ -86,7 +86,7 @@
     "lite": "Start learning about basic electronics and robot behaviour. By connecting two sensors to the motors (using the motor controller) one can build a robot that reacts to the sensors. Moving away from or towards the light, or not bumping into obstacles.",
     "basic": "Learn about software (block-based and Python). By adding a microcontroller one can create more complex behaviours and use more sensors.",
     "pioneer": "Explore all robotic possibilities. By adding a computer one can use even more sensors (camera, but even lidar) and a gripper. Apart from programming in blocks and Python, one can also use all possibilites of Robot Operating System (ROS).",
-    "master": "Upgraded version of all hardware, focussing on development and learning about robot applications. Includes a 2D lidar, 3D depth camera, omnidirectional wheels, and a 4DOF manipulator.",
+    "master": "Upgraded version of all hardware, focussing on development and learning about robot applications. Includes a 2D lidar, 3D depth camera, omnidirectional wheels, and a 4DOF manipulator.\n\nWe are curretnly working on a new version which we will fully open source.",
     "start": "Get started with"
   },
   "start": {

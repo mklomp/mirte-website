@@ -68,6 +68,7 @@
     "lite": "Leer de basis over electronica en robot gedrag. Door twee sensoren aan de motoren te koppelen (met de motor controller) kan je een robot bouwen die reageert op deze sensoren. De robot zal naar het licht toe of van het licht af bewegen. Of juist obstakels vermijden.",
     "basic": "Leer over software (blokken en Python). Door een microcontroller toe te voegen kan je complexer gedrag maken en more sensoren gebruiken.",
     "pioneer": "Ontdek alle mogelijkheden van robotica. Door een computer toe te voegen kunnen nog meer sensoren gebruikt worden (camera en zelfs lidar) en een gripper. Naast programmeren in blokken en Python, kunnen nu alle mogelijkheden van Robot Operating System (ROS) benut worden.",
+    "master": "Geüpgradede versie van alle hardware, gericht op ontwikkeling en het leren over robottoepassingen. Inclusief een 2D-lidar, 3D-dieptescamera, omnidirectionele wielen en een 4DOF-manipulator.\n\nOp dit moment werken we aan een neiuwe versie die geheel open-source wordt.",
     "start": "Aan de slag met"
   },
   "start": {
