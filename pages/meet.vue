@@ -64,7 +64,7 @@ const eventsWithStatus = computed(() => {
               <p class="card-text">
                 <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
                 <FontAwesomeIcon icon="globe" class="icon-color"/> {{ item.language }}
-                <FontAwesomeIcon icon="robot" class="icon-color"/> {{ $t(item.robot) }}
+                <FontAwesomeIcon icon="robot" class="icon-color"/> {{ item.robot }}
                 <FontAwesomeIcon icon="calendar-days" class="icon-color"/> {{ $t(item.recurrenceKey) }}
               </p>
             </div>

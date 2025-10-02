@@ -5,7 +5,7 @@ import { useRoute , useRouter} from 'nuxt/app'
 const route = useRoute()
 const router = useRouter()
 const selectable = computed(() => route.query.selectable)
-let robot = ref(route.query.robot)
+let robot = ref(route.query.robot ?? 'lite')
 
 let robots = {
           lite: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
@@ -35,6 +35,8 @@ let hardware = [
 
 <div>
   <div class="container">
+
+  
     <div v-if="selectable" class="row">
       <div class="col-4" @click="robot='lite'; router.replace({ query: { ...route.query, robot: 'lite' } })" style="text-align: center;">
         <button :style="robot == 'lite' ? 'background-color: #f1be45;': ''">
@@ -75,7 +77,7 @@ let hardware = [
           </div>
         </div>
       </div>
-
+    
     </div>
 
    </div>

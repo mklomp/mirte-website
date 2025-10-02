@@ -23,7 +23,7 @@ const carouselImages = Object.keys(images)
         <div class="col-md-6 mb-4 mb-md-0">
           <h1 class="mb-3">MIRTE{{ $t('about.why.mission') }}</h1>
           <p class="lead">
-            <p v-html="$t('about.why.mission_text')"></p>
+            <p v-html="$t('about.why.mission_text', {strongStart: '<strong>',strongEnd: '</strong>'})"></p>
           </p>
         </div>
 

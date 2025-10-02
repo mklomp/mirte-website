@@ -24,7 +24,7 @@
   "about":{
     "why":{
       "mission": "'s Mission",
-      "mission_text": "<strong>Our mission is to inspire students in science and engineering.</strong> With the MIRTE robot we are able to create meaningful hands-on learning experiences across multiple engineering disciplines. As an <strong>open</strong>, <strong>modular</strong>, and <strong>affordable</strong> platform, MIRTE makes robotics accessible for learners from primary school to university level.",
+      "mission_text": "{strongStart}Our mission is to inspire students in science and engineering.{strongEnd} With the MIRTE robot we are able to create meaningful hands-on learning experiences across multiple engineering disciplines. As an {strongStart}open{strongEnd}, {strongStart}modular{strongEnd}, and {strongStart}affordable{strongEnd} platform, MIRTE makes robotics accessible for learners from primary school to university level.",
       "pillars": "'s Three Pillars",
       "open": "Open",
       "open_text": "MIRTE is fully open-source. Both software and hardware are freely available, allowing educators to adapt, extend, and share the platform. For students, this means they are never limited by proprietary systems—they can always explore how everything works and learn in depth.",
