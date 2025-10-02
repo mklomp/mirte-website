@@ -39,6 +39,12 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  vite: {
+    plugins: [
+      require('vite-svg-loader')()
+    ]
+  },
+
   nitro: {
     preset: 'static',
   },

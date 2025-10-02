@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxtjs/i18n": "^9.2.1",
     "sass": "^1.89.2",
-    "usebootstrap": "^3.5.100"
+    "usebootstrap": "^3.5.100",
+    "vite-svg-loader": "^5.1.0"
   }
 }

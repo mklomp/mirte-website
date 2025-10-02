@@ -1,7 +1,9 @@
 {
   "navbar": {
     "home": "Home",
-    "whois": "Wie is Mirte?",
+    "about": "Over",
+    "why": "Waarom",
+    "stories": "verhalen",
     "robots": "Robots",
     "configure": "Configureer",
     "start": "Aan de slag",
@@ -17,6 +19,25 @@
   "home": {
     "home": "Een goedkope, volledig open source onderwijs robotlijn vanaf basisonderwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. mechanica, software, and electronica).",
     "check_robots": "Bekijk alle"
+  },
+  "about":{
+    "why":{
+      "mission": "'s Missie",
+      "mission_text": "<strong>Het is onze missie om studenten te inspireren in wetenschap en technologie.</strong> Met de MIRTE-robot kunnen we betekenisvolle, praktijkgerichte leerervaringen creëren binnen meerdere technische disciplines. Als een <strong>open</strong>, <strong>modulair</strong> en <strong>betaalbaar</strong> platform maakt MIRTE robotica toegankelijk voor leerlingen van de basisschool tot en met de universiteit.",
+      "pillars": "'s Drie Pijlers",
+      "open": "Open",
+      "open_text": "MIRTE is volledig open-source. Zowel software als hardware zijn vrij beschikbaar, zodat docenten het platform kunnen aanpassen, uitbreiden en delen. Voor studenten betekent dit dat ze nooit beperkt worden door gesloten systemen: ze kunnen altijd ontdekken hoe alles werkt en diepgaand leren.",
+      "modular": "Modulair",
+      "modular_text": "MIRTE is ontworpen met modulariteit als kern. Elk onderdeel kan worden vervangen, geüpgraded of hergeconfigureerd, en de meeste onderdelen zijn standaard en uitwisselbaar. Zo kunnen docenten een configuratie kiezen die past bij hun leerdoelen, terwijl studenten vrij kunnen experimenteren, onderdelen combineren en zelf nieuwe oplossingen creëren.",
+      "affordable": "Betaalbaar",
+      "affordable_text": "MIRTE gebruikt goedkope, toegankelijke componenten en biedt verschillende niveaus van complexiteit, waardoor het binnen elk budget past. Zo kunnen docenten ook in kleinere groepen werken, terwijl studenten profiteren van een rijkere, intensievere leerervaring.",
+      "layered_modular_design": "Gelaagd Modulair Ontwerp",
+      "layered_modular_design_text": "In ons ontwerp hebben we binnen verschillende disciplines—mechanica, programmeren en elektronica—diverse lagen van complexiteit geïntroduceerd. In de kern gaat het om een geavanceerde robot, ontwikkeld met state-of-the-art technologieën. Deze complexiteit wordt gefaseerd aangeboden via eenvoudigere “schillen”, waardoor er een doorlopende leerlijn ontstaat: studenten kunnen stap voor stap dieper en complexer gaan. Voor docenten biedt dit de mogelijkheid om, per discipline of juist multidisciplinair, het niveau van de complexiteit af te stemmen op de leerdoelen en het niveau van de studenten."
+    }
+  },
+  "stories": {
+    "media": "In de media",
+    "publications": "Publicaties"
   },
   "configure": {
     "chose": "KIES JE ONDERDELEN",
@@ -80,6 +101,16 @@
     "customize": "Verander je",
     "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE basic of de MIRTE pioneer.",
     "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE lite of de MIRTE basic."
+  },
+  "mirte_complexity":{
+    "mechanical": "Mechanica",
+    "programming": "Programmeren",
+    "electronics": "Electronica",
+    "design": "Ontwerpen",
+    "JST": "PCB + JST kabels",
+    "blocks": "Visueel Programmeren/Blokken",
+    "manufacturing": "Vervaardigen",
+    "PCB": "PCB Ontwerp"
   },
   "meet":{
     "workshops": "Workshops",

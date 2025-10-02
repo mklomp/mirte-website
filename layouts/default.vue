@@ -21,6 +21,18 @@ const localePath = useLocalePath()
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
+            {{ $t("navbar.about") }}
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <NuxtLink :to="localePath({ path: '/why'})" class="nav-link" @click="visible = !visible">
+              {{ $t("navbar.why") }} <span class="mirte">MIRTE</span></NuxtLink>
+            <NuxtLink :to="localePath({ path: '/stories'})" class="nav-link" @click="visible = !visible">
+              <span class="mirte">MIRTE</span>'s {{ $t("navbar.stories") }}</NuxtLink>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             {{ $t("navbar.robots") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">

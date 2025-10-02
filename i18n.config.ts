@@ -5,5 +5,5 @@ export default defineI18nConfig(() => ({
     legacy: false,
     locale: 'en',
     fallbackLocale: 'en',
-    messages: { nl, en },
+    messages: { nl, en }
   }))

@@ -63,6 +63,9 @@ footer {
 }
 
 
+strong {
+  font-weight: bold;
+}
 
 #__nuxt {
   overflow-x:hidden; // preventing carousel from adding scrollbar. cant be in body due to viewport

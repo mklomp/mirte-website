@@ -1,7 +1,10 @@
 {
   "navbar": {
     "home": "Home",
-    "whois": "Who is Mirte?",
+    "about": "About",
+    "why": "Why",
+    "stories": "stories",
+    "team": "Team",
     "robots": "Robots",
     "configure": "Configure",
     "start": "Getting Started",
@@ -17,6 +20,25 @@
   "home": {
     "home": "A low-cost, fully open-source educational robot track from primary school up to university level. Using a standard set of off-the-shelf components, one can gradually learn about multiple engineering disciplines (eg, mechanical, software, and electrical).",
     "check_robots": "Check out all"
+  },
+  "about":{
+    "why":{
+      "mission": "'s Mission",
+      "mission_text": "<strong>Our mission is to inspire students in science and engineering.</strong> With the MIRTE robot we are able to create meaningful hands-on learning experiences across multiple engineering disciplines. As an <strong>open</strong>, <strong>modular</strong>, and <strong>affordable</strong> platform, MIRTE makes robotics accessible for learners from primary school to university level.",
+      "pillars": "'s Three Pillars",
+      "open": "Open",
+      "open_text": "MIRTE is fully open-source. Both software and hardware are freely available, allowing educators to adapt, extend, and share the platform. For students, this means they are never limited by proprietary systems—they can always explore how everything works and learn in depth.",
+      "modular": "Modular",
+      "modular_text": "MIRTE is designed with modularity at its core. Every component can be replaced, upgraded, or reconfigured, and most parts are off-the-shelf and interchangeable. This allows educators to choose configurations that fit their learning goals, while students can experiment freely, combine components in new ways, and create their own solutions.",
+      "affordable": "Affordable",
+      "affordable_text": "MIRTE uses low-cost, accessible components and offers multiple levels of complexity, making it suitable for any budget. This allows educators to work with smaller groups, while students benefit from a richer, more engaging learning experience.",
+      "layered_modular_design": "Layerend Modular Design",
+      "layered_modular_design_text": "In our design, we have introduced multiple layers of complexity across different disciplines—mechanics, programming, and electronics. At its core, MIRTE is an advanced robot developed with state-of-the-art technologies. This complexity is gradually revealed through simplified “layers,” creating a continuous learning pathway that allows students to explore progressively deeper and more complex concepts. For educators, this approach provides the flexibility to tailor the level of complexity—per discipline or in a multidisciplinary way—according to their learning objectives and the students’ level."
+    }
+  },
+  "stories": {
+    "media": "In the media",
+    "publications": "Publications"
   },
   "configure": {
     "chose": "CHOOSE YOUR ITEMS",
@@ -98,6 +120,20 @@
     "customize": "Customize your",
     "select_robot_secondary_text": "At secondary level you can start with the MIRTE basic, or the MIRTE pioneer.",
     "select_robot_primary_text": "At primary level you can start with the MIRTE lite, or the MIRTE basic."
+  },
+  "mirte_complexity":{
+    "mechanical": "Mechanical",
+    "programming": "Programming",
+    "electronics": "Electronics",
+    "design": "Design",
+    "JST": "PCB + JST cables",
+    "blocks": "Visual Programming/Blocks",
+    "manufacturing": "Manufacturing",
+    "breadboard": "Breadboard",
+    "python": "Python",
+    "CAD": "CAD/CAM",
+    "PCB": "PCB Design",
+    "ROS": "Linux/ROS2"
   },
   "meet":{
     "workshops": "Workshops",
