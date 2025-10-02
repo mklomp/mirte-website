@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from 'vue'
 
 // Automatically import all .jpg files from the mission folder
 const images = import.meta.glob('@/assets/images/photo_selection/*.jpg', { eager: true, import: 'default' })
@@ -11,6 +12,16 @@ const carouselImages = Object.keys(images)
     title: `Slide ${i + 1}`,
     desc: `Description for slide ${i + 1}`
   }))
+
+onMounted(() => {
+  const el = document.getElementById('missionCarousel')
+  if (el && window.bootstrap) {
+    new window.bootstrap.Carousel(el, {
+      interval: 3000,
+      ride: 'carousel'
+    })
+  }
+})
 </script>
 
 <template>
@@ -29,7 +40,7 @@ const carouselImages = Object.keys(images)
 
         <!-- Dynamic Carousel side -->
         <div class="col-md-6">
-          <div id="missionCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div id="missionCarousel" class="carousel slide">
             <div class="carousel-inner">
               <div 
                 v-for="(img, i) in carouselImages" 
