@@ -83,7 +83,8 @@ const events = ref([
   { title: "Studenten presenteren verbeteringen voor mest-opruim-robot", description: "ME News", date: '2024-06-17', side: 'left', link: 'https://www.tudelft.nl/2024/me/nieuws/studenten-presenteren-verbeteringen-voor-mest-opruim-robot' },
   { title: "Bètavakken saai? Niet als een TU student de lessen geeft", description: "Wijstad", date: '2024-06-14', side: 'left', link: 'https://www.tudelft.nl/2024/wijstad/betavakken-saai-niet-als-een-tu-student-de-lessen-geeft' },
   { title: "New lab develops robots that understand humans", description: "TU Delta", date: '2024-04-24', side: 'left', link: 'https://delta.tudelft.nl/en/article/new-lab-develops-robots-that-understand-humans' },
-  { title: "MIRTE: an affordable, open, mobile robot education platform", description: "SEFI 2024", date: '2024-09-05', side: 'right', link: 'https://zenodo.org/records/14256821' }
+  { title: "MIRTE: an affordable, open, mobile robot education platform", description: "SEFI 2024", date: '2024-09-05', side: 'right', link: 'https://zenodo.org/records/14256821' },
+  { title: "The educational robot inspiring students of all ages", description: "TUD Stories", date: '2025-10-30', side: 'left', link: 'https://www.tudelft.nl/en/stories/articles/the-educational-robot-inspiring-students-of-all-ages'}
 ])
 
 const sortedEvents = computed(() =>
