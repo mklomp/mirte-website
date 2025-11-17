@@ -10,7 +10,7 @@
     </main>
 
     <footer>
-      <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft. info@mirte.org.
+      <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft - <a href="mailto:info@mirte.org">contact</a> - <a href="https://github.com/mirte-robot">github</a>
     </footer>
   </div>
 </template>

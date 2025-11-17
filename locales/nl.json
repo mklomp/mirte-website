@@ -18,8 +18,22 @@
   },
   "footer": "wordt ontwikkeld door",
   "home": {
-    "home": "Een goedkope, volledig open source onderwijs robotlijn vanaf basisonderwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. mechanica, software, and electronica).",
-    "check_robots": "Bekijk alle"
+    "home": "Een modulair, betaalbaar en open-source robotplatform voor onderwijs - van basisschool tot universiteit.",
+    "title": "Ontdek Robotica. Stap voor stap. Met MIRTE.",
+    "modular_text": "Bouw en leer op jouw niveau.",
+    "open_text": "Ontdek, pas aan, en deel.",
+    "affordable_text": "Aan de slag vanaf €20 per robot.",
+    "mission_text_1": "MIRTE maakt robotica toegankelijk door complexe technologie stap voor stap op te bouwen. Het combineert scaffolding, active learning en project-based learning, zodat leerlingen en studenten eigenaarschap ervaren en vertrouwen krijgen in hun technische vaardigheden.",
+    "mission_text_2": "MIRTE heeft de afgelopen jaren al bijgedragen aan het winnen van verschillende prijzen. Door de inzet van de MIRTE heeft de NUVO in 2024 de {strongStart}Mekelprijs{strongEnd} ontvangen. In 2025 werd onze inzet gewaardeerd met de {strongStart}SURF Onderwijsaward{strongEnd}.",
+    "read_more_why": "Lees hier waarom we MIRTE ontwerpen",
+    "for_who": "Voor wie is MIRTE?",
+    "for_who_text_1": "MIRTE is ontworpen om mee te groeien met iedere leerling en student, van basisschool tot universiteit. Het platform biedt een unieke leerervaring waarin technologie stap voor stap toegankelijk wordt gemaakt. Dankzij de modulaire opzet kunnen gebruikers op hun eigen niveau instappen en zich geleidelijk ontwikkelen naar complexere toepassingen.",
+    "for_who_text_2": "Voor jonge leerlingen betekent dit een eerste kennismaking met techniek in een veilige, speelse omgeving. Ze bouwen eenvoudige robots en leren spelenderwijs hoe mechanica en programmeren samenkomen. Voor studenten in het hoger onderwijs biedt MIRTE juist de mogelijkheid om multidisciplinair te werken aan uitdagende projecten waarin mechanica, elektronica en software samenkomen. Zo ontstaat een leeromgeving waarin experimenteren centraal staat en fouten maken onderdeel is van het leerproces.",
+    "read_more_for": "Lees hier hoe deze gelaagdheid werkt",
+    "getting_started": "Aan de slag met MIRTE",
+    "choose_your_mirte": "Bepaal met welke MIRTE je wil starten.",
+    "start_learning": "Ga aan de slag met het lesmateriaal.",
+    "do_workshop": "Óf volg een van de workshops op locatie."
   },
   "about":{
     "why":{
@@ -118,8 +132,10 @@
     "program_ide": "Programmeren",
     "program_ide_text": "Programmeer je robot in de",
     "customize": "Verander je",
-    "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE basic of de MIRTE pioneer.",
-    "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE lite of de MIRTE basic."
+    "select_robot_secondary_text": "Voor het voortgezet onderwijs kan je beginnen met de MIRTE Basic of de MIRTE Pioneer.",
+    "select_robot_primary_text": "Voor het primair onderwijs kan je beginnen met de MIRTE Lite of de MIRTE Basic.",
+    "select_robot_higher_text": "Voor het hoger onderwijs kan je beginnen met de MIRTE Pioneer of de MIRTE Master.",
+    "select_robot_all_text": "Hieronder vind je een overzicht van de gehele MIRTE familie."
   },
   "mirte_complexity":{
     "mechanical": "Mechanica",

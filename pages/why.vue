@@ -139,35 +139,3 @@ onMounted(() => {
 
   </div>
 </template>
-
-<style scoped>
-.grey-blue {
-  color: #9db7be !important;
-}
-
-.pillar-card {
-  position: relative;
-  overflow: hidden;
-  border: none;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  background: #fff;
-}
-
-.icon-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 8rem; /* grote iconen */
-  color: #9db7be;
-  opacity: 0.35; /* transparantie */
-  pointer-events: none;
-  z-index: 0;
-}
-
-.pillar-card .card-body {
-  position: relative;
-  z-index: 1;
-}
-</style>

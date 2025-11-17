@@ -18,8 +18,22 @@
   },
   "footer": "is being developed by",
   "home": {
-    "home": "A low-cost, fully open-source educational robot track from primary school up to university level. Using a standard set of off-the-shelf components, one can gradually learn about multiple engineering disciplines (eg, mechanical, software, and electrical).",
-    "check_robots": "Check out all"
+    "home": "A modular, affordable and open-source robotplatform for education - from primary school up to university.",
+    "title": "Discover Robotics. Step by step. With MIRTE.",
+    "modular_text": "Build and learn at your own level.",
+    "open_text": "Discover, modify, and share.",
+    "affordable_text": "Get started from €20 per robot.",
+    "mission_text_1": "MIRTE makes robotics accessible by building up complex technology step by step. It combines scaffolding, active learning, and project-based learning, enabling pupils and students to experience ownership and gain confidence in their technical skills.",
+    "mission_text_2": "In recent years, MIRTE has already contributed to winning several awards. Thanks to the use of MIRTE, the NUVO received the {strongStart}Mekel Prize{strongEnd} in 2024. In 2025, our efforts were recognized with the {strongStart}SURF Education Award{strongEnd}.",
+    "read_more_why": "Read more about why we are designing MIRTE",
+    "for_who": "Who is MIRTE for?",
+    "for_who_text_1": "MIRTE is designed to grow along with every learner, from primary school to university. The platform offers a unique learning experience in which technology is made accessible step by step. Thanks to its modular setup, users can start at their own level and gradually progress toward more complex applications.",
+    "for_who_text_2": "For young learners, this means an initial introduction to technology in a safe and playful environment. They build simple robots and gradually discover how mechanics and programming come together. For students in higher education, MIRTE offers the opportunity to work in a multidisciplinary way on challenging projects where mechanics, electronics, and software meet. This creates a learning environment in which experimentation is central and making mistakes is part of the learning process.",
+    "read_more_for": "Read more about this layered design",
+    "getting_started": "Getting started with MIRTE",
+    "choose_your_mirte": "Choose which MIRTE you want to start with.",
+    "start_learning": "Start working with the learning materials.",
+    "do_workshop": "Ór follow one of the on-site workshops."
   },
   "about":{
     "why":{
@@ -118,8 +132,10 @@
     "program_ide": "Program",
     "program_ide_text": "Start programming your robot in the",
     "customize": "Customize your",
-    "select_robot_secondary_text": "At secondary level you can start with the MIRTE basic, or the MIRTE pioneer.",
-    "select_robot_primary_text": "At primary level you can start with the MIRTE lite, or the MIRTE basic."
+    "select_robot_secondary_text": "At secondary level you can start with the MIRTE Basic, or the MIRTE Pioneer.",
+    "select_robot_primary_text": "At primary level you can start with the MIRTE Lite, or the MIRTE Basic.",
+    "select_robot_higher_text": "At primary level you can start with the MIRTE Pioneer, or the MIRTE Master.",
+    "select_robot_all_text": "You can find the overview of the MIRTE family below."
   },
   "mirte_complexity":{
     "mechanical": "Mechanical",

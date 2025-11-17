@@ -60,7 +60,7 @@ const localePath = useLocalePath()
               {{ $t("navbar.primary") }}</NuxtLink>
             <NuxtLink :to="localePath({ path: '/start', query: { level: 'secondary' } })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.secondary") }}</NuxtLink>
-            <NuxtLink :to="localePath({ path: '/steps', query: { level: 'higher' } })" class="nav-link" @click="visible = !visible">
+            <NuxtLink :to="localePath({ path: '/start', query: { level: 'higher' } })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
             <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
