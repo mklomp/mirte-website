@@ -77,8 +77,8 @@
         <div class="two-column">
 
            <div class="column-text video-container">
-                 <iframe src="https://www.youtube.com/embed/rk2JA9a-Nsc?controls=0" allowfullscreen></iframe>
-            </div>
+             <video controls autoplay muted playsinline src="https://surfdrive.surf.nl/public.php/dav/files/PTWYon64ZFTGB7Y/"></video>
+           </div>
 
             <div class="column-text">
                 <p>{{ $t("home.for_who_text_1") }}</p>
