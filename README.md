@@ -16,10 +16,19 @@ source node_env/bin/activate
 
 ## Build
 
-- backend:
+- development:
 
   ```sh
   npm install
   npm run dev
   ```
 
+- local deployment:
+
+
+  ```sh
+  npm install
+  npm generate
+  export NUXT_APP_BASE_URL=/
+  python3 -m http.server -d .output/public
+  ```
