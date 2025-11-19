@@ -10,7 +10,10 @@
     </main>
 
     <footer>
-      <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft - <a href="mailto:info@mirte.org">contact</a> - <a href="https://github.com/mirte-robot">github</a>
+      <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft -
+      <a href="mailto:info@mirte.org">contact</a> -
+      <a href="https://github.com/mirte-robot">github</a> -
+      <NuxtLink :to="{ path: '/privacy' }" >privacy</NuxtLink>
     </footer>
   </div>
 </template>
