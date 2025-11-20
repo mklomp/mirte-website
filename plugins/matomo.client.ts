@@ -1,9 +1,34 @@
 export default defineNuxtPlugin((nuxtApp) => {
+
+  window._paq = window._paq || [];
+
+  window._paq.push(['disableCookies']);
+  window._paq.push(['disableBrowserFeatureDetection']);
+
+  const matomoUrl = "https://stats.mirte.org/";
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = matomoUrl + "matomo.js";
+  document.head.appendChild(script);
+
+  window._paq.push(['setTrackerUrl', matomoUrl + 'matomo.php']);
+  window._paq.push(['setSiteId', 1]);
+
   nuxtApp.$router.afterEach((to) => {
-    if (typeof window !== 'undefined' && (window as any)._paq) {
-      (window as any)._paq.push(['setCustomUrl', to.fullPath]);
-      (window as any)._paq.push(['setDocumentTitle', document.title]);
-      (window as any)._paq.push(['trackPageView']);
-    }
+      // Do not include paths that ends with a / due to
+      // hoe Vue works. Vue creates dummy folders that
+      // will actually forward to the single page setup.
+      // Therefore, when refeshing, it will first treat
+      // it as a folder and add the /, which redirects
+      // to the single page. We only want to track the
+      // single page visits.
+      if (!to.path.endsWith("/")) {
+        window._paq.push(['setCustomUrl', to.fullPath]);
+        window._paq.push(['setDocumentTitle', document.title]);
+        window._paq.push(['trackPageView']);
+        window._paq.push(['enableLinkTracking']);
+      }   
   });
+
+
 });
