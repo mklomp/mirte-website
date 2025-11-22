@@ -1,5 +1,13 @@
 <script>
+  // Set locate to cookie value
   const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
   const locale = cookie ? cookie[1] : 'en';
+
+  // Otherwise, set it to the broswer default (or en)
+  if (!locale) {
+    const lang = (navigator.language || '' ).toLowerCase();
+    locale = lang.startsWith('nl') ? 'nl' : 'en';
+  }
+  
   window.location.href = '/' + locale;
 </script>
