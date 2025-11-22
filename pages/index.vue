@@ -77,7 +77,7 @@
         <div class="two-column">
 
            <div class="column-text video-container">
-             <video controls autoplay muted playsinline src="https://surfdrive.surf.nl/public.php/dav/files/PTWYon64ZFTGB7Y/"></video>
+             <video controls autoplay muted playsinline src="https://media.mirte.org/video/Tu-Delft-NUVO-Robotica-web-kwaliteit-1.mp4"></video>
            </div>
 
             <div class="column-text">
