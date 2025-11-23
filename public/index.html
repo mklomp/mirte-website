@@ -4,16 +4,6 @@
   <!-- Meta referrer policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <!-- Matomo tracking -->
-  <script src="https://stats.mirte.org/matomo.js"></script>
-  <script>
-    var _paq = window._paq = window._paq || [];
-    _paq.push(['enableLinkTracking']);
-    _paq.push(['setTrackerUrl', 'https://stats.mirte.org/matomo.php']);
-    _paq.push(['setSiteId', '1']);
-  </script>
-  
-
   <script>
     const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
     let locale = cookie ? cookie[1] : null;
@@ -23,15 +13,18 @@
       locale = lang.startsWith('nl') ? 'nl' : 'en';
     }
 
-    // --- Fire virtual pageview for target locale ---
-    _paq.push(['setCustomUrl', '/' + locale]);           // Set virtual URL
-    _paq.push(['setDocumentTitle', locale.toUpperCase()]); // Optional: set title
-    _paq.push(['trackPageView']);                        // Track before redirect
+    // --- Track virtual pageview via Image (to make sure the php is loaded) ---
+    const matomoUrl = `https://stats.mirte.org/matomo.php?idsite=1&rec=1&url=https%3A%2F%2Fmirte.org%2F${locale}`;
+    const img = new Image();
+    img.onload = () => {
+      // --- Redirect after tracking request completes ---
+      window.location.replace('/' + locale + '/');
+    };
+    img.src = matomoUrl;
 
-    // --- Redirect immediately ---
-    window.location.replace('/' + locale + '/');
   </script>
 </head>
+
 
 
 
