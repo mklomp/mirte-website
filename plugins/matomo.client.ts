@@ -28,8 +28,6 @@ export default defineNuxtPlugin((nuxtApp) => {
           // Override Matomo referrer
           window._paq.push(['setReferrerUrl', originalReferrer]);
           sessionStorage.removeItem('originalReferrer');
-        } else {
-          window._paq.push(['setReferrerUrl', '']);
         }
         window._paq.push(['setCustomUrl', to.fullPath]);
         window._paq.push(['setDocumentTitle', document.title]);
@@ -41,3 +39,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 
 });
+
