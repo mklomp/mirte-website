@@ -23,12 +23,21 @@ export default defineNuxtPlugin((nuxtApp) => {
       // to the single page. We only want to track the
       // single page visits.
       if (!to.path.endsWith("/")) {
+        const originalReferrer = sessionStorage.getItem('originalReferrer');
+        if (originalReferrer) {
+          // Override Matomo referrer
+          window._paq.push(['setReferrerUrl', originalReferrer]);
+          sessionStorage.removeItem('originalReferrer');
+        } else {
+          window._paq.push(['setReferrerUrl', '']);
+        }
         window._paq.push(['setCustomUrl', to.fullPath]);
         window._paq.push(['setDocumentTitle', document.title]);
         window._paq.push(['trackPageView']);
         window._paq.push(['enableLinkTracking']);
       }   
   });
+
 
 
 });
