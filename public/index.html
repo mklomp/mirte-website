@@ -9,7 +9,13 @@
     locale = lang.startsWith('nl') ? 'nl' : 'en';
   }
   
-  window.location.href = '/' + locale;
+  // Create a meta refresh dynamically to redirect after 0 seconds
+  // which preservers the referrer
+  const meta = document.createElement('meta');
+  meta.httpEquiv = "refresh";
+  meta.content = "0; URL=/" + locale;
+  document.head.appendChild(meta);
 </script>
+
 
 
