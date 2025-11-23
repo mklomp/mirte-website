@@ -5,13 +5,14 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Matomo tracking -->
+  <script src="https://stats.mirte.org/matomo.js"></script>
   <script>
     var _paq = window._paq = window._paq || [];
     _paq.push(['enableLinkTracking']);
     _paq.push(['setTrackerUrl', 'https://stats.mirte.org/matomo.php']);
     _paq.push(['setSiteId', '1']);
   </script>
-  <script async src="https://stats.mirte.org/matomo.js"></script>
+  
 
   <script>
     const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
@@ -31,6 +32,7 @@
     window.location.replace('/' + locale + '/');
   </script>
 </head>
+
 
 
 
