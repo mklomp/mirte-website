@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta referrer policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <script>
+    // Save original referrer in sessionStorage
+    sessionStorage.setItem('originalReferrer', document.referrer);
+
+    // Set locate to cookie value
     const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
     let locale = cookie ? cookie[1] : null;
 
+    // Otherwise, set it to the broswer default (or en)
     if (!locale) {
       const lang = (navigator.language || '').toLowerCase();
       locale = lang.startsWith('nl') ? 'nl' : 'en';
     }
 
-    // --- Track virtual pageview via Image (to make sure the php is loaded) ---
-    const matomoUrl = `https://stats.mirte.org/matomo.php?idsite=1&rec=1&url=https%3A%2F%2Fmirte.org%2F${locale}`;
-    const img = new Image();
-    img.onload = () => {
-      // --- Redirect after tracking request completes ---
-      window.location.replace('/' + locale + '/');
-    };
-    img.src = matomoUrl;
-
+    window.location.replace('/' + locale + '/');
   </script>
 </head>
+
 
 
 
