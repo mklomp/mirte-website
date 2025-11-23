@@ -1,21 +1,36 @@
-<script>
-  // Set locate to cookie value
-  const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
-  let locale = cookie ? cookie[1] : null;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta referrer policy -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  // Otherwise, set it to the broswer default (or en)
-  if (!locale) {
-    const lang = (navigator.language || '' ).toLowerCase();
-    locale = lang.startsWith('nl') ? 'nl' : 'en';
-  }
-  
-  // Create a meta refresh dynamically to redirect after 0 seconds
-  // which preservers the referrer
-  const meta = document.createElement('meta');
-  meta.httpEquiv = "refresh";
-  meta.content = "0; URL=/" + locale;
-  document.head.appendChild(meta);
-</script>
+  <!-- Matomo tracking -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['setTrackerUrl', 'https://stats.mirte.org/matomo.php']);
+    _paq.push(['setSiteId', '1']);
+  </script>
+  <script async src="https://stats.mirte.org/matomo.js"></script>
+
+  <script>
+    const cookie = document.cookie.match(/i18n_redirected=(\w+)/);
+    let locale = cookie ? cookie[1] : null;
+
+    if (!locale) {
+      const lang = (navigator.language || '').toLowerCase();
+      locale = lang.startsWith('nl') ? 'nl' : 'en';
+    }
+
+    // --- Fire virtual pageview for target locale ---
+    _paq.push(['setCustomUrl', '/' + locale]);           // Set virtual URL
+    _paq.push(['setDocumentTitle', locale.toUpperCase()]); // Optional: set title
+    _paq.push(['trackPageView']);                        // Track before redirect
+
+    // --- Redirect immediately ---
+    window.location.replace('/' + locale + '/');
+  </script>
+</head>
 
 
 
