@@ -1,9 +1,11 @@
 <script setup>
 import { useLocalePath } from '#i18n'
 const localePath = useLocalePath()
+const head = useLocaleHead()
 </script>
 
 <template>
+<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
   <div class="container-fluid">
     <NuxtLink :to="localePath('index')" class="navbar-brand" style="font-family: Livvic-Bold;">
       <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE lite" height="45">
@@ -94,7 +96,7 @@ const localePath = useLocalePath()
   </div>
 
 
-
+</Html>
 </template>
 
 <script>

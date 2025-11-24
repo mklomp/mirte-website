@@ -25,8 +25,8 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English' },
-      { code: 'nl', iso: 'nl-NL', name: 'Nederlands' }
+      { code: 'en', language: 'en-US', name: 'English' },
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands' }
     ],
     detectBrowserLanguage: {
       useCookie: true,
@@ -34,7 +34,8 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       alwaysRedirect: true,
     },
-    vueI18n: './i18n.config.ts'
+    vueI18n: './i18n.config.ts',
+    baseUrl: 'https://mirte.org'
   },
 
   vue: {
