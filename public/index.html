@@ -17,9 +17,11 @@
       locale = lang.startsWith('nl') ? 'nl' : 'en';
     }
 
-    window.location.replace('/' + locale);
+    let path = window.location.pathname.replace(/\/$/, ''); 
+    window.location.replace(path + '/' + locale);
   </script>
 </head>
+
 
 
 
