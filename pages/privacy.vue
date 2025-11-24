@@ -1,3 +1,7 @@
+<script setup>
+useHead({ title: 'Privacy Statement - MIRTE' })
+</script>
+
 <template>
   <div class="container py-3" style="width: 40vw;">
 

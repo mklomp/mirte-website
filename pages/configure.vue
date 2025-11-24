@@ -2,6 +2,10 @@
 import { computed } from 'vue'
 import { useRoute , useRouter} from 'nuxt/app'
 
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+useHead({ title: `${t('navbar.configure')} – MIRTE` })
+
 const route = useRoute()
 const router = useRouter()
 const selectable = computed(() => route.query.selectable)

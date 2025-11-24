@@ -26,6 +26,8 @@ onMounted(() => {
   })
   isMounted.value = true
 })
+
+useHead({ title: 'robots - MIRTE' })
 </script>
 
 <template>

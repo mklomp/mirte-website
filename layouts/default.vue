@@ -83,7 +83,7 @@ const localePath = useLocalePath()
           </ul>
         </li>
         <li class="nav-item">
-          <NuxtLink :to="localePath({ path: '/meet' })" class="nav-link" @click="visible = !visible"> {{ $t("navbar.meet") }}
+          <NuxtLink :to="localePath({ path: '/meet' })" class="nav-link" @click="visible = !visible"> {{ $t("navbar.meet") }} MIRTE
           </NuxtLink>
         </li>
         <li class="nav-item dropdown">

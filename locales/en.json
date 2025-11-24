@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "why": "Why",
-    "stories": "stories",
+    "stories": "Stories",
     "team": "Team",
     "robots": "Robots",
     "configure": "Configure",
@@ -14,7 +14,7 @@
     "higher": "Higher education",
     "workshops": "Workshops",
     "docs": "Documentation",
-    "meet": "Meet Mirte"
+    "meet": "Meet"
   },
   "footer": "is being developed by",
   "home": {

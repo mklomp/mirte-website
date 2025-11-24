@@ -1,3 +1,8 @@
+<script setup>
+useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
+</script>
+
+
 <template>
 
 <div class="hero">

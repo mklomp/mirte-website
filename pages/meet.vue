@@ -1,5 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+useHead({ title: `${t('navbar.meet')} – MIRTE` })
 
 // Sample data
 const recurring = [

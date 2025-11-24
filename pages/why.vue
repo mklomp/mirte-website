@@ -1,6 +1,10 @@
 <script setup>
 import { onMounted } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+useHead({ title: `${t('navbar.why')} – MIRTE` })
+
 // Automatically import all .jpg files from the mission folder
 const images = import.meta.glob('@/assets/images/photo_selection/*.jpg', { eager: true, import: 'default' })
 

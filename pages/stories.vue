@@ -75,6 +75,10 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+useHead({ title: `${t('navbar.stories')} – MIRTE` })
+
 const events = ref([
   { title: "Mag ik mij voorstellen: iamMirte", description: "Dutch Innovationpark", date: '2023-05-11', side: 'left', link: 'https://dutchinnovationpark.nl/nl/overzicht/nieuws/mag-ik-mij-voorstellen-iammirte/' },
   { title: "Mensen begrijpen", description: "Delft Matters", date: '2024-12-06', side: 'left', link: 'https://delftmatters.nl/nummer-6-december-2024/mensen-begrijpen/'},
