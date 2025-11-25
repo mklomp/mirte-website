@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' }
       ]
-    }
+    },
   },
 
   components: [
@@ -19,7 +19,22 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['bootstrap/dist/css/bootstrap.min.css', '@/assets/scss/main.scss'],
   plugins: ['@/plugins/bootstrap.client.js'],
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/fonts'],
+
+  fonts: {
+    families: [
+      {
+        name: 'Livvic',
+        provider: 'google',
+        weights: [700]
+      },
+      {
+        name: 'Overpass',
+        provider: 'google',
+        weights: [300, 700]
+      },
+    ]
+  },
 
   i18n: {
     strategy: 'prefix',
@@ -38,6 +53,10 @@ export default defineNuxtConfig({
     baseUrl: 'https://mirte.org'
   },
 
+  image: {
+    format: ['webp'],
+  },
+
   vue: {
     compilerOptions: {
       hydrationMismatchDetails: true
@@ -53,7 +72,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'static',
+    preset: 'static'
   },
 
   compatibilityDate: '2025-08-14',

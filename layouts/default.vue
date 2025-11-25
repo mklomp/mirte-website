@@ -8,7 +8,7 @@ const head = useLocaleHead()
 <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
   <div class="container-fluid">
     <NuxtLink :to="localePath('index')" class="navbar-brand" style="font-family: Livvic-Bold;">
-      <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE lite" height="45">
+      <NuxtImg style="float: left; margin-right: 10px;" src="/images/mirte_logo.png" alt="MIRTE lite" height="45"/>
       <h1>MIRTE</h1>
     </NuxtLink>
     <button class="navbar-toggler" type="button" @click="visible = !visible" data-bs-toggle="collapse"

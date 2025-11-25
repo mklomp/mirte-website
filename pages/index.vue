@@ -1,16 +1,30 @@
 <script setup>
-useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
+useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education'})
+
+const img = useImage()
+
+const backgroundStyles = computed(() => {
+  const imgUrl = img('/images/selection/Techniek_Atelier-Foto_Sander_Foederer_SFG6293-2-2.jpg')
+  return { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imgUrl}')` }
+})
+
+
+const backgroundStyles2 = computed(() => {
+  const imgUrl2 = img('/images/lijn.png')
+  return { backgroundImage: `url('${imgUrl2}')` }
+})
+
 </script>
 
 
 <template>
 
-<div class="hero">
+<div class="hero" :style="backgroundStyles2">
 
   
     
 
-    <section class="hero-section">
+    <section class='hero-section' :style="backgroundStyles">
         
         <h1>{{ $t("home.title") }}</h1>
         <p>{{ $t("home.home") }}</p>
