@@ -3,19 +3,33 @@ import { onMounted } from 'vue'
 
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-useHead({ title: `${t('navbar.why')} – MIRTE` })
+useHead({ 
+  title: `${t('navbar.why')} – MIRTE`,
+  meta: [
+    {
+      name: 'description',
+      content: 'Explaination of the key educational concepts of the MIRTE robot, designed around scaffolding.'
+    }
+  ]
+})
 
-// Automatically import all .jpg files from the mission folder
-const images = import.meta.glob('@/assets/images/photo_selection/*.jpg', { eager: true, import: 'default' })
+const images = [
+  'Techniek_Atelier-Foto_Sander_Foederer_SAN7944-2-2.jpg',
+  'Techniek_Atelier-Foto_Sander_Foederer_SFG6293-2-2.jpg',
+  'ProjectRobotica-30.jpg',
+  'ProjectRobotica-76.jpg',
+  'MDP2025-11.jpg',
+  'MDP2025-35.jpg',
+  'MDP2025-6.jpg'
+]
 
-// Convert object to array, sort by filename for consistency
-const carouselImages = Object.keys(images)
-  .sort()
-  .map((key, i) => ({
-    src: images[key],
+const carouselImages = images
+  .map((file, i) => ({
+    src: `/images/selection/${file}`,
     title: `Slide ${i + 1}`,
     desc: `Description for slide ${i + 1}`
   }))
+
 
 onMounted(() => {
   const el = document.getElementById('missionCarousel')
@@ -26,6 +40,7 @@ onMounted(() => {
     })
   }
 })
+  
 </script>
 
 <template>
@@ -36,7 +51,7 @@ onMounted(() => {
       <div class="row align-items-center">
         <!-- Text side -->
         <div class="col-md-6 mb-4 mb-md-0">
-          <h1 class="mb-3">MIRTE{{ $t('about.why.mission') }}</h1>
+          <h1 class="mb-3 fw-bold">MIRTE{{ $t('about.why.mission') }}</h1>
           <p class="lead" v-html="$t('about.why.mission_text', {strongStart: '<strong>',strongEnd: '</strong>'})"></p>
         </div>
 
@@ -49,11 +64,14 @@ onMounted(() => {
                 :key="i" 
                 :class="['carousel-item', i === 0 ? 'active' : '']"
               >
-                <img :src="img.src" class="d-block w-100 rounded shadow" :alt="img.title">
-     <!--           <div class="carousel-caption d-none d-md-block">
-                  <h5>{{ img.title }}</h5>
-                  <p>{{ img.desc }}</p> 
-                </div>-->
+               <NuxtImg
+                  :src="img.src"
+                  class="d-block w-100 rounded shadow"
+                  :alt="img.title"
+                  format="webp"
+                  :width="[480, 768, 1024, 1200]"
+                  sizes="(max-width: 600px) 480px, (max-width: 1024px) 768px, 1200px"
+                /> 
               </div>
             </div>
 
@@ -82,7 +100,7 @@ onMounted(() => {
               <ClientOnly><FontAwesomeIcon icon="lock-open" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.open') }}</h4>
+              <h2 class="card-title fw-bold">{{ $t('about.why.open') }}</h2>
               <p class="card-text">
                 {{ $t('about.why.open_text') }}
               </p>
@@ -97,7 +115,7 @@ onMounted(() => {
               <ClientOnly><FontAwesomeIcon icon="puzzle-piece" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.modular') }}</h4>
+              <h2 class="card-title fw-bold">{{ $t('about.why.modular') }}</h2>
               <p class="card-text">
                 {{ $t('about.why.modular_text') }}
               </p>
@@ -112,7 +130,7 @@ onMounted(() => {
               <ClientOnly><FontAwesomeIcon icon="sack-dollar" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.affordable') }}</h4>
+              <h2 class="card-title fw-bold">{{ $t('about.why.affordable') }}</h2>
               <p class="card-text">
                 {{ $t('about.why.affordable_text') }}
               </p>
@@ -133,7 +151,7 @@ onMounted(() => {
 
         <!-- Text side -->
         <div class="col-md-6">
-          <h1 class="mb-3 text-center">{{ $t('about.why.layered_modular_design') }}</h1>
+          <h1 class="mb-4 text-center fw-bold">{{ $t('about.why.layered_modular_design') }}</h1>
           <p>
             {{ $t('about.why.layered_modular_design_text') }}
           </p>

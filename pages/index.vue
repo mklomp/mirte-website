@@ -1,22 +1,44 @@
 <script setup>
-useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
+useHead({
+  title: 'MIRTE - an Inspiring Robot for Technology Education',
+  meta: [
+    {
+      name: 'description',
+      content: 'Homepage of the MIRTE educational robot. The robot that will inspire you to learn about robotics and technology from primary school up to PhD level'
+    }
+  ]
+})
+
+const img = useImage()
+
+const backgroundStyles = computed(() => {
+  const imgUrl = img('/images/selection/Techniek_Atelier-Foto_Sander_Foederer_SFG6293-2-2.jpg', {format: 'webp'})
+  return { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imgUrl}')` }
+})
+
+
+const backgroundStyles2 = computed(() => {
+  const imgUrl2 = img('/images/lijn.png')
+  return { backgroundImage: `url('${imgUrl2}')` }
+})
+
 </script>
 
 
 <template>
 
-<div class="hero">
+<div class="hero" :style="backgroundStyles2">
 
   
     
 
-    <section class="hero-section">
+    <section class='hero-section' :style="backgroundStyles">
         
         <h1>{{ $t("home.title") }}</h1>
         <p>{{ $t("home.home") }}</p>
-        <NuxtLink :to="{ path: '/start', query: { level: 'primary' } }" ><button class="btn my-button">{{ $t("navbar.primary") }}</button></NuxtLink>
-        <NuxtLink :to="{ path: '/start', query: { level: 'secondary' } }" ><button class="btn my-button">{{ $t("navbar.secondary") }}</button></NuxtLink>
-        <NuxtLink :to="{ path: '/start', query: { level: 'higher' } }" ><button class="btn my-button">{{ $t("navbar.higher") }}</button></NuxtLink>
+        <NuxtLink :to="{ path: '/education/primary' }" ><button class="btn my-button">{{ $t("navbar.primary") }}</button></NuxtLink>
+        <NuxtLink :to="{ path: '/education/secondary' }" ><button class="btn my-button">{{ $t("navbar.secondary") }}</button></NuxtLink>
+        <NuxtLink :to="{ path: '/education/higher' }" ><button class="btn my-button">{{ $t("navbar.higher") }}</button></NuxtLink>
     </section>
 
     <div class="container">
@@ -38,7 +60,7 @@ useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
               <ClientOnly><FontAwesomeIcon icon="puzzle-piece" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.modular') }}</h4>
+              <div class="h4 mirte card-title fw-bold">{{ $t('about.why.modular') }}</div>
               <p class="card-text">
                 {{ $t('home.modular_text') }}
               </p>
@@ -50,7 +72,7 @@ useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
               <ClientOnly><FontAwesomeIcon icon="lock-open" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.open') }}</h4>
+              <div class="h4 mirte card-title fw-bold">{{ $t('about.why.open') }}</div>
               <p class="card-text">
                 {{ $t('home.open_text') }}
               </p>
@@ -63,7 +85,7 @@ useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
               <ClientOnly><FontAwesomeIcon icon="sack-dollar" /></ClientOnly>
             </div>
             <div class="card-body position-relative">
-              <h4 class="card-title fw-bold">{{ $t('about.why.affordable') }}</h4>
+              <div class="h4 mirte card-title fw-bold">{{ $t('about.why.affordable') }}</div>
               <p class="card-text">
                 {{ $t('home.affordable_text') }}
               </p>
@@ -101,21 +123,21 @@ useHead({ title: 'MIRTE - an Inspiring Robot for Technology Education' })
 
             <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <NuxtLink :to="{ path: '/start', query: { level: 'all' } }" ><button class="btn my-button"><h5>1. {{ $t("home.choose_your_mirte") }}</h5></button></NuxtLink>
+                <NuxtLink :to="{ path: '/education/all'}" ><button class="btn my-button"><div class="h5 mirte">1. {{ $t("home.choose_your_mirte") }}</div></button></NuxtLink>
               </div>
             </div>
 
 
             <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <a href="https://workshops.mirte.org"><button class="btn my-button"><h5>2. {{ $t("home.start_learning") }}</h5></button></a>
+                <a href="https://workshops.mirte.org"><button class="btn my-button"><div class="h5 mirte">2. {{ $t("home.start_learning") }}</div></button></a>
               </div>
             </div>
 
 
              <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <NuxtLink :to="{ path: '/meet' }" ><button class="btn my-button"><h5>3. {{ $t("home.do_workshop") }}</h5></button></NuxtLink>
+                <NuxtLink :to="{ path: '/meet' }" ><button class="btn my-button"><div class="h5 mirte">3. {{ $t("home.do_workshop") }}</div></button></NuxtLink>
               </div>
             </div>
 </div>

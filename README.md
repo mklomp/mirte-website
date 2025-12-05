@@ -28,7 +28,7 @@ source node_env/bin/activate
 
   ```sh
   npm install
-  npm generate
   export NUXT_APP_BASE_URL=/
+  npm run generate
   python3 -m http.server -d .output/public
   ```

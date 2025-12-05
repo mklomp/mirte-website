@@ -19,7 +19,22 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['bootstrap/dist/css/bootstrap.min.css', '@/assets/scss/main.scss'],
   plugins: ['@/plugins/bootstrap.client.js'],
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/fonts'],
+
+  fonts: {
+    families: [
+      {
+        name: 'Livvic',
+        provider: 'google',
+        weights: [700]
+      },
+      {
+        name: 'Overpass',
+        provider: 'google',
+        weights: [300, 700]
+      },
+    ]
+  },
 
   i18n: {
     strategy: 'prefix',
@@ -43,12 +58,10 @@ export default defineNuxtConfig({
       hydrationMismatchDetails: true
     }
   },
-  
-  ssr: true,
 
   vite: {
     plugins: [
-      require('vite-svg-loader')()
+      require('vite-svg-loader')({svgo: false}) // disables SVGO optimization, keeps IDs intact for translations
     ]
   },
 

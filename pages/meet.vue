@@ -2,7 +2,15 @@
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-useHead({ title: `${t('navbar.meet')} – MIRTE` })
+useHead({ 
+  title: `${t('navbar.meet')} – MIRTE`,
+  meta: [
+    {
+      name: 'description',
+      content: 'An overview of all the event the MIRTE robots are and were present including recurring workshops.'
+    }
+  ]
+})
 
 // Sample data
 const recurring = [
@@ -37,20 +45,29 @@ const events = [
 const today = new Date()
 const userLocale = typeof navigator !== 'undefined' ? navigator.language : 'en-US'
 
+function parseISODateAsUTC(dateStr) {
+  // Split YYYY-MM-DD
+  const [year, month, day] = dateStr.split('-').map(Number)
+  // Month is 0-indexed in JS Date
+  return new Date(Date.UTC(year, month - 1, day))
+}
+
 // Computed property to add status and sort by startDate
 const eventsWithStatus = computed(() => {
   return events
     .map(e => {
-      const start = new Date(e.startDate)
-      const end = e.endDate ? new Date(e.endDate) : start
+      const start = new Date(parseISODateAsUTC(e.startDate))
+      const end = e.endDate ? new Date(parseISODateAsUTC(e.endDate)) : start
       return {
         ...e,
         isPast: end < today,
-        startDateObj: start
+        startDateObj: start,
+        endDateObj: end
       }
     })
     .sort((a, b) => b.startDateObj - a.startDateObj) // sort ascending by start date
 })
+
 </script>
 
 <template>
@@ -63,7 +80,7 @@ const eventsWithStatus = computed(() => {
         <div class="col-12 col-md-6" v-for="(item, i) in recurring" :key="'rec-' + i">
           <a :href="item.link" target="_blank" class="card text-decoration-none h-100 bg-light text-dark opacity-100">
             <div class="card-body text-dark">
-              <h5 class="card-title">{{ item.title }}</h5>
+              <div class="card-title h5">{{ item.title }}</div>
               <p class="card-text">
                 <ClientOnly><FontAwesomeIcon icon="location-dot" class="icon-color" /></ClientOnly> {{ item.location }} 
                 <ClientOnly><FontAwesomeIcon icon="globe" class="icon-color"/></ClientOnly> {{ item.language }}
@@ -78,19 +95,25 @@ const eventsWithStatus = computed(() => {
         <h2 class="text-lg font-bold mb-2">{{ $t("meet.events") }}</h2>
         <div>{{ $t("meet.events_text") }}</div>
         <div class="col-12 col-md-6" v-for="(item, i) in eventsWithStatus" :key="'evt-' + i">
-          <a :href="item.link" target="_blank" class="card text-decoration-none h-100"
-            :class="item.isPast ? 'bg-light text-dark opacity-50' : 'bg-light text-dark opacity-100'">
+          <component
+            :is="item.link ? 'a' : 'div'"
+            :href="item.link || undefined"
+            target="_blank"
+            class="card text-decoration-none h-100 bg-light text-dark opacity-100"
+            :class="item.isPast ? 'bg-light text-dark opacity-75 bg-opacity-50' : 'bg-light text-dark opacity-100'"
+          >
             <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
+              <div class="card-title h5">{{ item.title }}</div>
               <p class="card-text">
-    <!--            <FontAwesomeIcon icon="location-dot" class="icon-color" /> {{ item.location }} 
-                <FontAwesomeIcon icon="calendar-days" class="icon-color"/> -->
-                {{ new Date(item.startDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}
-  <span v-if="item.endDate"> - {{ new Date(item.endDate).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}</span>
+                <ClientOnly>
+                  {{ new Date(item.startDateObj).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}
+  <span v-if="item.endDate"> - {{ new Date(item.endDateObj).toLocaleDateString(userLocale, { day: 'numeric', month: 'short', year: 'numeric' }) }}</span>
+                </ClientOnly>
               </p>
             </div>
-          </a>
-        </div>
+          </component>
+        </div> 
+
       </div>
     </div>
   </div>
