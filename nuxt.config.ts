@@ -1,10 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// Get base url, and make sure it has a triling slash
+const baseURL = (process.env.NUXT_APP_BASE_URL || '/mirte-website/').replace(/\/?$/, '/');
+
 export default defineNuxtConfig({
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/mirte-website/',
+    baseURL,
     head: {
       link: [
-        { rel: 'icon', type: 'image/png', href: 'favicon.png' }
+        { rel: 'icon', type: 'image/png', href: `${baseURL}favicon.png` }
       ]
     }
   },
