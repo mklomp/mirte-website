@@ -1,11 +1,21 @@
 <script setup>
-import { computed } from 'vue'
 import { useRoute , useRouter} from 'nuxt/app'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const selectable = computed(() => route.query.selectable)
-let robot = ref(route.query.robot ?? 'lite')
+
+useHead({ 
+  title: `${t('navbar.configure')} – MIRTE`,  
+  meta: [
+    {
+      name: 'description',
+      content: 'Configurator of all the MIRTE robots. Check the bill of materials for all the MIRTE robots.'
+    }
+  ]
+
+})
 
 let robots = {
           lite: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
@@ -28,6 +38,26 @@ let hardware = [
           {name: 'actuators', options: ['servo', 'oled']}
         ];
 
+const selected = ref([])
+const disabled = ref([])
+const selectable = ref(route.query.selectable !== "false")
+const robot = ref(route.query.robot ?? 'pioneer')
+
+onMounted(() => {
+  selectable.value = route.query.selectable !== "false"
+  robot.value = route.query.robot ?? 'pioneer'
+
+  selected.value = [...robots[robot.value].selected]
+  disabled.value = [...robots[robot.value].disabled]
+})
+
+function switchRobot(newRobot){
+  robot.value = newRobot
+  selected.value = [...robots[robot.value].selected]
+  disabled.value = [...robots[robot.value].disabled]
+  router.replace({ query: { ...route.query, robot: newRobot } })
+}
+
 </script>
 
 
@@ -36,27 +66,29 @@ let hardware = [
 <div>
   <div class="container">
 
-  
     <div v-if="selectable" class="row">
-      <div class="col-4" @click="robot='lite'; router.replace({ query: { ...route.query, robot: 'lite' } })" style="text-align: center;">
+      <div class="col-4" @click="switchRobot('lite')" style="text-align: center;">
         <button :style="robot == 'lite' ? 'background-color: #f1be45;': ''">
-         <div style="padding: 10px;">
-         <img src="@/assets/images/lite_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> lite
-         </div>
+          <div style="padding: 10px;">
+            <NuxtImg style="max-height:50px;" src="/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE lite picture" height="50" width="50" format="webp"/>
+            <span class="mirte">MIRTE</span> lite
+          </div>
         </button> 
       </div>
-      <div class="col-4" @click="robot='basic'; router.replace({ query: { ...route.query, robot: 'basic' } })" style="text-align: center;">
+      <div class="col-4" @click="switchRobot('basic')" style="text-align: center;">
         <button :style="robot == 'basic' ? 'background-color: #f1be45;': ''">
-         <div style="padding: 10px;">
-         <img src="@/assets/images/basic_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> basic
-         </div>
+          <div style="padding: 10px;">
+            <NuxtImg style="max-height:50px;" src="/images/MIRTE_basic_transparant.png" alt="MIRTE basic picture" height="50" width="50" format="webp"/>
+            <span class="mirte">MIRTE</span> basic
+          </div>
         </button>
       </div>
-      <div class="col-4" @click="robot='pioneer'; router.replace({ query: { ...route.query, robot: 'pioneer' } })" style="text-align: center;">
+      <div class="col-4" @click="switchRobot('pioneer')" style="text-align: center;">
         <button :style="robot == 'pioneer' ? 'background-color: #f1be45;': ''">
-         <div style="padding: 10px;">
-         <img src="@/assets/images/pioneer_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> pioneer
-         </div>
+          <div style="padding: 10px;">
+            <NuxtImg style="max-height:50px;" src="/images/MIRTE_pioneer_transparant.png" alt="MIRTE pioneer picture" height="50" width="50" format="webp"/>
+            <span class="mirte">MIRTE</span> pioneer
+          </div>
         </button>
       </div>
     </div>
@@ -64,23 +96,38 @@ let hardware = [
     <h1 v-if="selectable" style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</h1>
     <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ robot }}</h1>
 
+
     <div class="row">
-      <div class="col-sm-3" v-for="(component, index_component) in hardware" style="padding-top: 40px;">
-        <div :style="robots[robot]['disabled'].includes(component.name) ? 'color: #ccc;' : ''">
-        {{ $t("configure." + component.name) }}
+      <div class="col-sm-3"
+          v-for="(component, index_component) in hardware"
+          :key="component.name"
+          style="padding-top: 40px;"
+      >
+        <div :style="disabled.includes(component.name) ? 'color: #ccc;' : ''">
+          <strong>{{ $t("configure." + component.name) }}</strong>
         </div>
-        <div v-for="(option, index_option) in component.options" style="font-family:'Overpass-Light'; padding-top: 7px;">
-          <input style="accent-color: #9db7be;" type="checkbox" value="" :id="'checkbox_' + index_component + '_' + index_option" :checked="robots[robot]['selected'].includes(option)" :disabled="robots[robot]['disabled'].includes(option)">
-          <label class="form-check-label" :for="'checkbox_' + index_component + '_' + index_option">
+
+        <div v-for="(option, index_option) in component.options"
+            :key="option"
+            style="padding-top: 7px; "
+        >
+          <input
+            style="accent-color: #9db7be;"
+            type="checkbox"
+            :id="'checkbox_' + index_component + '_' + index_option"
+            :checked="selected.includes(option)"
+            :disabled="disabled.includes(option)"
+          />
+
+          <label :for="'checkbox_' + index_component + '_' + index_option" style="padding-left: 5px;">
             {{ $t("configure." + option) }}
           </label>
-          </div>
         </div>
       </div>
-    
     </div>
 
-   </div>
+  </div>
+</div>
 
 
 </template>

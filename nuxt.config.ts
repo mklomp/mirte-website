@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/mirte-website/',
     head: {
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+        { rel: 'icon', type: 'image/png', href: 'favicon.png' }
       ]
     }
   },
@@ -19,14 +19,29 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['bootstrap/dist/css/bootstrap.min.css', '@/assets/scss/main.scss'],
   plugins: ['@/plugins/bootstrap.client.js'],
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/image', '@nuxt/fonts'],
+
+  fonts: {
+    families: [
+      {
+        name: 'Livvic',
+        provider: 'google',
+        weights: [700]
+      },
+      {
+        name: 'Overpass',
+        provider: 'google',
+        weights: [300, 700]
+      },
+    ]
+  },
 
   i18n: {
     strategy: 'prefix',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English' },
-      { code: 'nl', iso: 'nl-NL', name: 'Nederlands' }
+      { code: 'en', language: 'en-US', name: 'English' },
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands' }
     ],
     detectBrowserLanguage: {
       useCookie: true,
@@ -34,7 +49,8 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       alwaysRedirect: true,
     },
-    vueI18n: './i18n.config.ts'
+    vueI18n: './i18n.config.ts',
+    baseUrl: 'https://mirte.org'
   },
 
   vue: {
@@ -42,12 +58,10 @@ export default defineNuxtConfig({
       hydrationMismatchDetails: true
     }
   },
-  
-  ssr: true,
 
   vite: {
     plugins: [
-      require('vite-svg-loader')()
+      require('vite-svg-loader')({svgo: false}) // disables SVGO optimization, keeps IDs intact for translations
     ]
   },
 

@@ -23,12 +23,22 @@ source node_env/bin/activate
   npm run dev
   ```
 
-- local deployment:
-
+- local deployment (as mirte.org):
 
   ```sh
   npm install
-  npm generate
   export NUXT_APP_BASE_URL=/
-  python3 -m http.server -d .output/public
+  npm run generate
+  python3 -m http.server -d dist
+  # visit http://localhost:8000
+  ```
+
+- local deployment (as fork on <username>.github.io/mirte-website):
+
+  ```sh
+  npm install
+  npm run generate
+  mv dist mirte-website
+  python3 -m http.server
+  # visit http://localhost:8000/mirte-website
   ```

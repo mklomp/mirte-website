@@ -3,12 +3,12 @@
     <!-- Header -->
     <div class="page-header py-3">
       <div class="row">
-        <div class="col-6 text-center">
-          <h5>Media</h5>
+        <div class="col-6 text-center h4 mirte">
+          Media
           <!-- <small class="text-muted">cite as: mirte.org</small> -->
         </div>
-        <div class="col-6 text-center">
-          <h5>Publications</h5>
+        <div class="col-6 text-center h4 mirte">
+          Publications
           <!-- <small class="text-muted">cite as: doi.org/10.5281/zenodo.14256821</small> -->
         </div>
       </div>
@@ -41,7 +41,7 @@
                 target="_blank"
                 class="timeline-content timeline-link"
               >
-                <h5>{{ item.title }}</h5>
+                <div class="h5 mirte">{{ item.title }}</div>
                 <small class="text-muted">{{ formatDate(item.date) }}</small>
                 <p>{{ item.description }}</p>
               </a>
@@ -60,7 +60,7 @@
                 target="_blank"
                 class="timeline-content timeline-link"
               >
-                <h5>{{ item.title }}</h5>
+                <div class="h5 mirte">{{ item.title }}</div>
                 <small class="text-muted">{{ formatDate(item.date) }}</small>
                 <p>{{ item.description }}</p>
               </a>
@@ -74,6 +74,18 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+useHead({ 
+  title: `${t('navbar.stories')} – MIRTE`,
+  meta: [
+    {
+      name: 'description',
+      content: 'A list of all media coverage and papers referencing the MIRTE robot.'
+    }
+  ]
+})
 
 const events = ref([
   { title: "Mag ik mij voorstellen: iamMirte", description: "Dutch Innovationpark", date: '2023-05-11', side: 'left', link: 'https://dutchinnovationpark.nl/nl/overzicht/nieuws/mag-ik-mij-voorstellen-iammirte/' },

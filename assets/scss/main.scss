@@ -1,22 +1,9 @@
 @use "@/assets/scss/colors.scss" as *;
 
-@font-face {
-    font-family: 'Livvic-Bold';
-    src:  url('assets/fonts/Livvic-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Overpass-Light';
-    src:  url('assets/fonts/Overpass-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Overpass-Bold';
-    src:  url('assets/fonts/Overpass-Bold.ttf') format('truetype');
-}
 
 .mirte {
-  font-family: 'Livvic-Bold';
+  font-family: 'Livvic' !important;
+  font-weight: bold !important;
 }
 
 
@@ -44,7 +31,6 @@ footer {
 
 .hero {
   flex: 1;
-  background-image: url('@/assets/images/lijn.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -105,11 +91,12 @@ a { color: inherit !important; }
 
 
 body{
-    font-family: 'Overpass-Light' !important;
+    font-family: 'Overpass' !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Livvic-Bold' !important;
+    font-family: 'Livvic' !important;
+    font-weight: bold !important;
 }
 
 body{
@@ -229,20 +216,14 @@ $custom-control-indicator-checked-bg: $grey-blue;
   color: $yellow;
 }
 
-.hero-section { background: #004080; color: white; text-align: center; padding: 20px; }
-        
-
-
-.hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('@/assets/images/photo_selection/Techniek_Atelier-Foto_Sander_Foederer_SFG6293-2-2.jpg');
- 
-background-size: cover;
-    background-position: bottom;
-    height: 300px; /* or your preferred fixed height */
-    width: 100%;
-    color: white;
-
-
+.hero-section { 
+  background: #004080; 
+  color: white; 
+  text-align: center; padding: 20px;
+  background-size: cover;
+  background-position: bottom;
+  height: 300px; /* or your preferred fixed height */
+  width: 100%;
 }
 
 
