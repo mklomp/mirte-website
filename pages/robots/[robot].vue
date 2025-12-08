@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch, computed } from 'vue'
 import { useRoute, useRouter } from 'nuxt/app'
 import MyComponent from '~/components/MyComponent.vue' // adjust path
 
@@ -25,12 +25,17 @@ watch(
   }
 )
 
+const robotName = computed(() => {
+  if (!robot.value) return ''
+  return robot.value.charAt(0).toUpperCase() + robot.value.slice(1)
+})
+
 useHead({
-  title: `MIRTE ${robot.value}`,
+  title: `MIRTE ${robotName.value}`,
   meta: [
     {
       name: 'description',
-      content: `Details for the MIRTE ${robot.value} robot.`
+      content: `Details for the MIRTE ${robotName.value} robot.`
     }
   ]
 })

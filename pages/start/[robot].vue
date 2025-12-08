@@ -54,8 +54,8 @@ function getUrlDXF() {
 <template>
 <div  class="container d-flex align-items-center">
   <div class="row" style="text-align: center;">
-  <div class="h3 mirte" v-if="level !== 'higher'">{{ $t("start.getting_started_with") }} MIRTE {{ robot }}</div>
-  <div class="h3 mirte" v-else>{{ $t("start.customize") }} MIRTE pioneer</div>
+  <div class="h3 mirte" v-if="level !== 'higher'">{{ $t("start.getting_started_with") }} MIRTE {{ robot.charAt(0).toUpperCase() + robot.slice(1) }}</div>
+  <div class="h3 mirte" v-else>{{ $t("start.customize") }} MIRTE Pioneer</div>
 
     <div class="col-md-3 col-xs-12 mb-1" style="padding-top: 50px;">
       <div class="h3 mirte" style="text-align: center;">1</div>

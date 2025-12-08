@@ -71,7 +71,7 @@ function switchRobot(newRobot){
         <button :style="robot == 'lite' ? 'background-color: #f1be45;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE lite picture" height="50" width="50" format="webp"/>
-            <span class="mirte">MIRTE</span> lite
+            <span class="mirte">MIRTE</span> Lite
           </div>
         </button> 
       </div>
@@ -79,7 +79,7 @@ function switchRobot(newRobot){
         <button :style="robot == 'basic' ? 'background-color: #f1be45;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_basic_transparant.png" alt="MIRTE basic picture" height="50" width="50" format="webp"/>
-            <span class="mirte">MIRTE</span> basic
+            <span class="mirte">MIRTE</span> Basic
           </div>
         </button>
       </div>
@@ -87,15 +87,14 @@ function switchRobot(newRobot){
         <button :style="robot == 'pioneer' ? 'background-color: #f1be45;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_pioneer_transparant.png" alt="MIRTE pioneer picture" height="50" width="50" format="webp"/>
-            <span class="mirte">MIRTE</span> pioneer
+            <span class="mirte">MIRTE</span> Pioneer
           </div>
         </button>
       </div>
     </div>
 
     <h1 v-if="selectable" style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</h1>
-    <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ robot }}</h1>
-
+    <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{  robot.charAt(0).toUpperCase() + robot.slice(1) }}</h1>
 
     <div class="row">
       <div class="col-sm-3"
