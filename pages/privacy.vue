@@ -17,7 +17,7 @@ useHead({
       <div class="row" style="text-align: left">
         <p>Effective Date: 19 November 2025</p>
         <p>This Privacy Policy replaces the 
-          <a href="https://github.com/mirte-robot/mirte-website/commits/main/pages/privacy.vue">earlier versions</a> 
+          <NuxtLink to="https://github.com/mirte-robot/mirte-website/commits/main/pages/privacy.vue">earlier versions</NuxtLink> 
           published on this website.</p>
 
           <div class="h3 mirte" style="text-align: center">Why</div>
@@ -82,8 +82,8 @@ useHead({
           we store on your machine with only functional cookies. At the moment this includes:</p>
 
           <ul>
-            <li><a href="https://github.com/mirte-robot/mirte-website/blob/ec1a81b61b3b28436869d61c1e3a7e2652000406/nuxt.config.ts#L32-L33">
-            i18n_redirected</a>: Storing your language preference.</li>
+            <li><NuxtLink to="https://github.com/mirte-robot/mirte-website/blob/ec1a81b61b3b28436869d61c1e3a7e2652000406/nuxt.config.ts#L32-L33">
+            i18n_redirected</NuxtLink>: Storing your language preference.</li>
           </ul>
       </div>
     </section>

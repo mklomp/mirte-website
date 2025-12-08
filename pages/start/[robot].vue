@@ -27,10 +27,10 @@ const base = ref('dxf')
 // methods
 function getUrl() {
   if (software.value === "orange_pi_zero2") {
-    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_orangepizero2_2024-10-09_10_25_37.img.xz";
+    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_orangepizero2_v0.1.1.img.xz";
   } 
   if (software.value === "raspberry_pi") {
-    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_rpi4b_2024-10-09_10_59_38.img.xz";
+    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_rpi4b_v0.1.1.img.xz";
   } 
   if (software.value === "latest_release") {
     return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/latest";
@@ -70,7 +70,7 @@ function getUrlDXF() {
       </select>
 
       <div style="text-align: center; margin-top: 20px;">
-        <a class="btn btn-primary my-button" :href="getUrlDXF()" >{{ $t("start.download") }}</a>
+        <NuxtLink class="btn btn-primary my-button" :to="getUrlDXF()"  target="_blank" rel="noopener noreferrer">{{ $t("start.download") }}</NuxtLink>
       </div>
     </div>
 
@@ -94,8 +94,8 @@ function getUrlDXF() {
 
       <p v-if="level == 'higher'" style="padding-top: 20px;">{{ $t("start.select_software_text") }}:</p>
       <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
-      <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png">here</a></p>
-      <p v-if="robot === 'lite'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
+      <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <NuxtLink to="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png" target="_blank" rel="noopener noreferrer">here</NuxtLink></p>
+      <p v-if="robot === 'lite'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <NuxtLink to="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png" target="_blank" rel="noopener noreferrer">here</NuxtLink></p>
 
       <select v-if="level === 'higher'" class="form-select" v-model="software" aria-label="software_choice">
         <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
@@ -105,7 +105,7 @@ function getUrlDXF() {
       </select>
 
       <div v-if="robot === 'pioneer' || level === 'higher'" style="text-align: center; margin-top: 20px;">
-        <a class="btn btn-primary my-button" :href="getUrl()">{{ $t("start.download") }}</a>
+        <NuxtLink class="btn btn-primary my-button" :to="getUrl()"  target="_blank" rel="noopener noreferrer">{{ $t("start.download") }}</NuxtLink>
       </div>
     </div>
 
@@ -115,9 +115,9 @@ function getUrlDXF() {
        <div class="h3 mirte" v-if="robot === 'pioneer' || level === 'higher'" style="text-align: center;">{{ $t("start.build_and_learn") }}</div>
        <div class="h3 mirte" v-if="robot === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</div>       
 
-       <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <a href="https://ide.mirte.org/">web IDE</a>.</p>
-       <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a :href="'https://workshops.mirte.org/' + $i18n.locale">{{ $t("start.workshops") }}</a>.</p>
-       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://docs.mirte.org/">{{ $t("start.documentation") }}</a>.</p>
+       <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <NuxtLink to="https://ide.mirte.org/" target="_blank" rel="noopener noreferrer">web IDE</NuxtLink>.</p>
+       <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <NuxtLink :to="'https://workshops.mirte.org/' + $i18n.locale" target="_blank" rel="noopener noreferrer">{{ $t("start.workshops") }}</NuxtLink>.</p>
+       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <NuxtLink to="https://docs.mirte.org/" target="_blank" rel="noopener noreferrer">{{ $t("start.documentation") }}</NuxtLink>.</p>
     </div>
 
 

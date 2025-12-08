@@ -65,9 +65,9 @@ const head = useLocaleHead()
             <NuxtLink :to="localePath({ path: '/education/higher' })" class="nav-link" @click="visible = !visible">
               {{ $t("navbar.higher") }}</NuxtLink>
             <div class="dropdown-divider"></div>
-            <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
+            <NuxtLink :to="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
               {{ $t("navbar.workshops") }} <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
-            </a>
+            </NuxtLink>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -76,12 +76,12 @@ const head = useLocaleHead()
             {{ $t("navbar.developers") }}
           </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <a href="https://docs.mirte.org/" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
+            <NuxtLink to="https://docs.mirte.org/" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
               {{ $t("navbar.docs") }} <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
-            </a>
-            <a class="nav-link d-flex" href="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">
+            </NuxtLink>
+            <NuxtLink class="nav-link d-flex" to="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">
               Github <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
-            </a>
+            </NuxtLink>
           </ul>
         </li>
         <li class="nav-item">

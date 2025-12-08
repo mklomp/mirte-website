@@ -78,7 +78,7 @@ const eventsWithStatus = computed(() => {
         <!-- Recurring workshops -->
         <div>{{ $t("meet.workshops_text") }}</div>
         <div class="col-12 col-md-6" v-for="(item, i) in recurring" :key="'rec-' + i">
-          <a :href="item.link" target="_blank" class="card text-decoration-none h-100 bg-light text-dark opacity-100">
+          <NuxtLink :to="item.link" target="_blank" class="card text-decoration-none h-100 bg-light text-dark opacity-100">
             <div class="card-body text-dark">
               <div class="card-title h5">{{ item.title }}</div>
               <p class="card-text">
@@ -88,7 +88,7 @@ const eventsWithStatus = computed(() => {
                 <ClientOnly><FontAwesomeIcon icon="calendar-days" class="icon-color"/></ClientOnly> {{ $t(item.recurrenceKey) }}
               </p>
             </div>
-          </a>
+          </NuxtLink>
         </div>
 
         <!-- Events -->
