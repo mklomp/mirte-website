@@ -1,3 +1,7 @@
+<script setup>
+import { useLocalePath } from '#i18n'
+const localePath = useLocalePath()
+</script>
 
 <template>
   <div class="wrapper">
@@ -13,7 +17,7 @@
       <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft -
       <NuxtLink to="mailto:info@mirte.org">contact</NuxtLink> -
       <NuxtLink to="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">github</NuxtLink> -
-      <NuxtLink :to="{ path: '/privacy' }" >privacy</NuxtLink>
+      <NuxtLink :to="localePath({ path: '/privacy' })" >privacy</NuxtLink>
     </footer>
   </div>
 </template>

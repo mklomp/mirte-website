@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { useRoute } from 'nuxt/app'
 import { useI18n } from 'vue-i18n'
 
+const localePath = useLocalePath()
 const { t } = useI18n()
 useHead({ 
   title: `${t('home.getting_started')} – MIRTE`,
@@ -79,10 +80,10 @@ function getUrlDXF() {
        <div class="h3 mirte" style="text-align: center;">2</div>
        <div class="h3 mirte" style="text-align: center;">{{ $t("start.get_hardware") }}</div>
  
-       <p v-if="level !== 'higher' && robot == 'lite'" style="padding-top: 20px;">{{ $t("start.get_hardware_lite_text") }} <NuxtLink :to="{ path: '/configure', query: { robot: 'lite', selectable: false } }" >bill of materials</NuxtLink></p>
-       <p v-if="level !== 'higher' && robot == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="{ path: '/configure', query: { robot: 'basic', selectable: false } }" >bill of materials</NuxtLink></p>
-       <p v-if="level !== 'higher' && robot == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="{ path: '/configure', query: { robot: 'pioneer', selectable: false } }" >bill of materials</NuxtLink></p>
-       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="{ path: '/configure', query: { robot: 'pioneer' } }" >bill of materials</NuxtLink></p>
+       <p v-if="level !== 'higher' && robot == 'lite'" style="padding-top: 20px;">{{ $t("start.get_hardware_lite_text") }} <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'lite', selectable: false } })" >bill of materials</NuxtLink></p>
+       <p v-if="level !== 'higher' && robot == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'basic', selectable: false } })" >bill of materials</NuxtLink></p>
+       <p v-if="level !== 'higher' && robot == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'pioneer', selectable: false } })" >bill of materials</NuxtLink></p>
+       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <NuxtLink :to="localePath({ path: '/configure', query: { robot: 'pioneer' } })" >bill of materials</NuxtLink></p>
     </div>
 
 

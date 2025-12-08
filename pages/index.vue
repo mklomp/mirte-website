@@ -9,6 +9,9 @@ useHead({
   ]
 })
 
+import { useLocalePath } from '#i18n'
+const localePath = useLocalePath()
+
 const img = useImage()
 
 const backgroundStyles = computed(() => {
@@ -123,7 +126,7 @@ const backgroundStyles2 = computed(() => {
 
             <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <NuxtLink :to="{ path: '/education/all'}" ><button class="btn my-button"><div class="h5 mirte">1. {{ $t("home.choose_your_mirte") }}</div></button></NuxtLink>
+                <NuxtLink :to="localePath({ path: '/education/all'})" ><button class="btn my-button"><div class="h5 mirte">1. {{ $t("home.choose_your_mirte") }}</div></button></NuxtLink>
               </div>
             </div>
 
@@ -137,7 +140,7 @@ const backgroundStyles2 = computed(() => {
 
              <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <NuxtLink :to="{ path: '/meet' }" ><button class="btn my-button"><div class="h5 mirte">3. {{ $t("home.do_workshop") }}</div></button></NuxtLink>
+                <NuxtLink :to="localePath({ path: '/meet' })" ><button class="btn my-button"><div class="h5 mirte">3. {{ $t("home.do_workshop") }}</div></button></NuxtLink>
               </div>
             </div>
 </div>
