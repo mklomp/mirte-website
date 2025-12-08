@@ -11,8 +11,8 @@
 
     <footer>
       <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft -
-      <a href="mailto:info@mirte.org">contact</a> -
-      <a href="https://github.com/mirte-robot">github</a> -
+      <NuxtLink to="mailto:info@mirte.org">contact</NuxtLink> -
+      <NuxtLink to="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">github</NuxtLink> -
       <NuxtLink :to="{ path: '/privacy' }" >privacy</NuxtLink>
     </footer>
   </div>

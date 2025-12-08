@@ -130,7 +130,7 @@ const backgroundStyles2 = computed(() => {
 
             <div class="col-md-4 col-xs-12 mb-1" >
               <div style="text-align: center; margin-top: 20px;">
-                <a href="https://workshops.mirte.org"><button class="btn my-button"><div class="h5 mirte">2. {{ $t("home.start_learning") }}</div></button></a>
+                <NuxtLink to="https://workshops.mirte.org"><button class="btn my-button"><div class="h5 mirte">2. {{ $t("home.start_learning") }}</div></button></NuxtLink>
               </div>
             </div>
 

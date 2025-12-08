@@ -36,15 +36,15 @@
               :key="'m'+i"
               class="timeline-item"
             >
-              <a
-                :href="item.link"
+              <NuxtLink
+                :to="item.link"
                 target="_blank"
                 class="timeline-content timeline-link"
               >
                 <div class="h5 mirte">{{ item.title }}</div>
                 <small class="text-muted">{{ formatDate(item.date) }}</small>
                 <p>{{ item.description }}</p>
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -55,15 +55,15 @@
               :key="'p'+i"
               class="timeline-item"
             >
-              <a
-                :href="item.link"
+              <NuxtLink
+                :to="item.link"
                 target="_blank"
                 class="timeline-content timeline-link"
               >
                 <div class="h5 mirte">{{ item.title }}</div>
                 <small class="text-muted">{{ formatDate(item.date) }}</small>
                 <p>{{ item.description }}</p>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
