@@ -242,6 +242,16 @@ const features = [
         }
       },
       {
+        name: 'Simulation',
+        tooltip: 'Gazebo simulation.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes' },
+          master: { status: 'yes' }
+        }
+      },
+      {
         name: 'Navigation',
         tooltip: 'Autonomous navigation with the robot using Nav2.',
         values: {
